@@ -18,7 +18,7 @@
     bind:this={bgElement}
 >
     <div
-        class="flex flex-col items-center justify-center h-full bg-[rgba(0,0,0,0.55)]"
+        class="flex flex-col items-center justify-center h-full bg-[rgba(0,0,0,0.55)] dark:bg-[rgba(0,0,0,0.4)] transition-all duration-300 ease-in-out"
     >
         <h1 class="text-5xl font-bold text-white">Kival Mahadew</h1>
         <h2 class="text-2xl font-bold text-white">Software Engineer</h2>
