@@ -1,59 +1,55 @@
-<script>
-	import Counter from './Counter.svelte';
-	import welcome from '$lib/images/svelte-welcome.webp';
-	import welcome_fallback from '$lib/images/svelte-welcome.png';
+<script lang="ts">
+    import { onMount } from "svelte";
+
+    import github from "$lib/images/github.svg";
+    import linkedin from "$lib/images/linkedin.svg";
+
+    let bgElement: HTMLElement;
+
+    onMount(() => {
+        // set height to available height - navbar height
+        let navbarHeight = document.querySelector("nav")!.clientHeight;
+        bgElement.style.height = `calc(100vh - ${navbarHeight}px)`;
+    });
 </script>
 
-<svelte:head>
-	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
-</svelte:head>
+<div
+    class="w-full h-full landing-bg bg-cover bg-center bg-no-repeat comfortaa"
+    bind:this={bgElement}
+>
+    <div
+        class="flex flex-col items-center justify-center h-full bg-[rgba(0,0,0,0.55)]"
+    >
+        <h1 class="text-5xl font-bold text-white">Kival Mahadew</h1>
+        <h2 class="text-2xl font-bold text-white">Software Engineer</h2>
+        <h2 class="text-2xl font-bold text-white">Computer Science at UKZN</h2>
+        <div class="p-4 flex flex-row gap-6">
+            <!-- github -->
+            <a href="https://www.github.com/kival-m" target="_blank">
+                <img
+                    src={github}
+                    alt="github"
+                    class="w-10 h-10 invert hover:scale-110 transition-all duration-300 ease-in-out"
+                />
+            </a>
 
-<section>
-	<h1>
-		<span class="welcome">
-			<picture>
-				<source srcset={welcome} type="image/webp" />
-				<img src={welcome_fallback} alt="Welcome" />
-			</picture>
-		</span>
+            <!-- linkedin -->
+            <a href="https://www.linkedin.com/in/kival-m/" target="_blank">
+                <img
+                    src={linkedin}
+                    alt="linkedin"
+                    class="w-10 h-10 invert hover:scale-110 transition-all duration-300 ease-in-out"
+                />
+            </a>
+        </div>
+    </div>
+</div>
 
-		to your new<br />SvelteKit app
-	</h1>
-
-	<h2>
-		try editing <strong>src/routes/+page.svelte</strong>
-	</h2>
-
-	<Counter />
-</section>
+<!-- image attribution -->
+<!-- Photo by Karsten Würth on Unsplash -->
 
 <style>
-	section {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		flex: 0.6;
-	}
-
-	h1 {
-		width: 100%;
-	}
-
-	.welcome {
-		display: block;
-		position: relative;
-		width: 100%;
-		height: 0;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
-	}
-
-	.welcome img {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		display: block;
-	}
+    .landing-bg {
+        background-image: url("https://images.unsplash.com/photo-1475070929565-c985b496cb9f?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&dl=karsten-wurth-7BjhtdogU3A-unsplash.jpg&w=2400");
+    }
 </style>
