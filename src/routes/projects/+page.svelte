@@ -14,7 +14,7 @@
 </div>
 
 <div
-    class="grid grid-flow-row grid-cols-1 md:grid-cols-3 p-5 container mx-auto"
+    class="grid grid-flow-row grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-5 container mx-auto"
 >
     <div
         class="flex flex-col gap-4 border-l-2 border-b-2 border-black p-5 m-2 shadow-lg rounded-lg
@@ -66,7 +66,7 @@
     </p>
 </div>
 <div
-    class="grid grid-flow-row grid-cols-1 md:grid-cols-3 p-5 container mx-auto"
+    class="grid grid-flow-row grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-5 container mx-auto"
 >
     {#each projects as project}
         <div
