@@ -28,15 +28,17 @@ export const projects: Project[] = [
         ]
     ),
     new Project("Shadows of Redemption",
-        "Description 3",
+        "A mystery puzzle visual novel where you must solve the mystery of the murder of a eccentric billionaire. Loosely based on the tabletop mystery game 'Sour Grapes of Wrath'",
         ["C++", "DALL-E"],
         ["projects/sor_start.png", "projects/sor_start.png", "projects/sor_start.png"],
-        []
+        [
+            new GitHub("KivalM/COMP315-Semester-Project", "SOR")
+        ]
     ),
-    new Project("Project 4",
-        "Description 4",
-        ["Tag1", "Tag2"],
-        ["https://via.placeholder.com/150", "https://via.placeholder.com/150", "https://via.placeholder.com/150"],
+    new Project("MindMasters",
+        "A CMS and e-learning platform focused on interactive lessons.",
+        ["Supabase", "SvelteKit"],
+        ["projects/mm.png"],
         []
     ),
 ]

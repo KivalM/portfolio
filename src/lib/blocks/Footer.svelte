@@ -1,4 +1,4 @@
-<footer class="shadow p-4">
+<footer class="shadow p-2 md:p-4">
     <div
         class="bg-zinc-800 rounded-lg w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between"
     >

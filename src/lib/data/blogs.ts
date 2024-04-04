@@ -10,7 +10,7 @@ export interface blog {
 
 export const blog: blog[] = [
     {
-        title: "First Post",
+        title: "Coming Soon",
         slug: "first-post",
         date: "2021-01-01",
         excerpt: "This is the first post",

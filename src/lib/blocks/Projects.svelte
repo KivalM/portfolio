@@ -4,14 +4,14 @@
     import { projects } from "$lib/data/projects";
 </script>
 
-<section class="container mx-auto p-4" id="projects">
+<section class="container mx-auto p-2 py-4 md:p-4" id="projects">
     <h2 class="text-6xl font-kode text-center">Projects</h2>
     <hr class="border-2 border-blue-500 w-1/5 mx-auto my-5" />
     <h3 class="text-3xl font-sans text-center">(・_・;)</h3>
 
     <div class="flex flex-col gap-5 justify-center items-center">
         {#each projects as project, i}
-            <div class="p-4 w-full md:w-3/4">
+            <div class="py-4 md:p-4 w-full md:w-3/4">
                 <ImageCard
                     images={project.images}
                     title={project.title}

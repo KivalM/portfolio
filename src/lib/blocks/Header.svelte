@@ -1,7 +1,31 @@
-<script>
+<script lang="ts">
+    import {
+        Navbar,
+        NavBrand,
+        NavLi,
+        NavUl,
+        NavHamburger,
+    } from "flowbite-svelte";
 </script>
 
-<nav class="fixed w-full z-20 top-0 start-0 font-kode bg-zinc-900">
+<Navbar
+    class="px-2 sm:px-4 py-2.5 fixed w-full z-20 top-0 start-0 bg-zinc-900 flex items-center justify-center "
+    let:NavContainer
+>
+    <NavContainer class="flex justify-center">
+        <NavHamburger />
+        <NavUl
+            activeClass="text-blue-500 font-kode font-bold"
+            nonActiveClass="text-blue-500 font-kode"
+        >
+            <NavLi href="/" active={true}>Home</NavLi>
+            <NavLi href="#about">About</NavLi>
+            <NavLi href="#projects">Projects</NavLi>
+            <NavLi href="#blog">Blog</NavLi>
+        </NavUl>
+    </NavContainer>
+</Navbar>
+<!-- <nav class="fixed w-full z-20 top-0 start-0 font-kode bg-zinc-900">
     <div
         class="flex flex-wrap items-center justify-between mx-auto p-4 md:justify-center"
     >
@@ -69,4 +93,4 @@
             </ul>
         </div>
     </div>
-</nav>
+</nav> -->

@@ -59,7 +59,11 @@
             <p class="text-gray-200 my-2">{description}</p>
         </div>
         <div>
-            <div class="flex flex-row gap-4 {!reverse ? 'justify-end' : ''}">
+            <div
+                class="flex flex-row gap-4 justify-end md:justify-normal {!reverse
+                    ? 'md:justify-end'
+                    : ''}"
+            >
                 {#each links as link}
                     <LinkBox {link} />
                 {/each}
