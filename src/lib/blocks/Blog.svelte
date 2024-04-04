@@ -4,7 +4,7 @@
     import { blog } from "$lib/data/blogs";
 </script>
 
-<section class="container mx-auto">
+<section class="container mx-auto" id="blog">
     <h2 class="text-6xl font-kode text-center">Blog</h2>
     <hr class="border-2 border-blue-500 w-1/5 mx-auto my-5" />
     <h3 class="text-3xl font-sans text-center">ಠ ''ಠ</h3>

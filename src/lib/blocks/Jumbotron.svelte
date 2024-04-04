@@ -14,7 +14,7 @@
     });
 </script>
 
-<div class="h-screen flex items-center justify-center font-sans">
+<section class="h-screen flex items-center justify-center font-sans" id="hero">
     <canvas class="h-full w-full absolute z-1" id="canvas"></canvas>
 
     <div
@@ -35,4 +35,4 @@
     <button class="absolute bottom-5 animate-bounce" on:click={scrollIntoView}>
         <Chevron direction="down" color="white" />
     </button>
-</div>
+</section>
