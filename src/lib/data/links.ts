@@ -12,7 +12,7 @@ export class GitHub extends Link {
     constructor(url: string, description: string | undefined) {
         super(
             'GitHub',
-            'https:github.com/' + url,
+            'https://github.com/' + url,
             'My github profile',
             'fa-brands fa-github text-white'
         );

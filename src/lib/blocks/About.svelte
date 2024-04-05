@@ -1,6 +1,5 @@
 <script>
     import Ferris from "$lib/components/icons/Ferris.svelte";
-    import Blog from "./Blog.svelte";
     import ExperienceTimeline from "./ExperienceTimeline.svelte";
 </script>
 
