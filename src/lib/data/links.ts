@@ -12,7 +12,7 @@ export class GitHub extends Link {
     constructor(url: string, description: string | undefined) {
         super(
             'GitHub',
-            'https:github.com/{url}',
+            'https:github.com/' + url,
             'My github profile',
             'fa-brands fa-github text-white'
         );
@@ -23,7 +23,7 @@ export class LinkedIn extends Link {
     constructor(url: string, description: string | undefined) {
         super(
             'LinkedIn',
-            'https://linkedin.com/in/{url}',
+            "https://linkedin.com/in/" + url,
             'My linkedin profile',
             'fa-brands fa-linkedin-in text-white'
         );
@@ -34,7 +34,7 @@ export class Email extends Link {
     constructor(url: string, description: string | undefined) {
         super(
             'Email',
-            'mailto:{url}',
+            'mailto:' + url,
             'My email',
             'fa-regular fa-envelope text-white'
         );
@@ -45,7 +45,7 @@ export class Website extends Link {
     constructor(url: string, description: string | undefined) {
         super(
             'Website',
-            '{url}',
+            url,
             'My website',
             'fas fa-globe text-white'
         );

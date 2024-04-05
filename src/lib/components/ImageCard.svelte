@@ -11,6 +11,7 @@
     export let links: Link[];
     export let reverse: boolean = false;
     export let tags: string[] = [];
+    export let team: string[] = [];
 
     const new_images: {
         src: string;
@@ -27,31 +28,32 @@
 </script>
 
 <div
-    class="bg-zinc-800 shadow-lg rounded-xl flex flex-col lg:flex-row {reverse
+    class="bg-zinc-800 shadow-lg rounded-xl grid grid-flow-row md:grid-flow-col md:grid-cols-2 {reverse
         ? 'lg:flex-row-reverse'
-        : ''} "
+        : ''} {images.length > 0 ? 'md:grid-cols-2' : 'md:grid-cols-1'}"
 >
-    <!-- <img class="object-cover object-center md:w-1/2" src={image} alt={title} /> -->
-    <div class="w-full lg:w-1/2">
-        <Carousel
-            class=""
-            images={new_images}
-            duration={10000}
-            slideDuration={1000}
-            let:Controls
-            let:Indicators
-            imgClass="object-cover object-center"
-        >
-            <div slot="slide" let:Slide let:index class="">
-                <Slide image={new_images[index]} class="h-full" />
-            </div>
-            {#if new_images.length > 1}
-                <Controls />
-                <Indicators />
-            {/if}
-        </Carousel>
-    </div>
-    <div class="p-6 lg:w-1/2 flex flex-col justify-between">
+    {#if images.length > 0}
+        <div>
+            <Carousel
+                class=""
+                images={new_images}
+                duration={10000}
+                slideDuration={1000}
+                let:Controls
+                let:Indicators
+                imgClass="object-cover object-center"
+            >
+                <div slot="slide" let:Slide let:index class="">
+                    <Slide image={new_images[index]} class="h-full" />
+                </div>
+                {#if new_images.length > 1}
+                    <Controls />
+                    <Indicators />
+                {/if}
+            </Carousel>
+        </div>
+    {/if}
+    <div class="p-6 flex flex-col justify-between">
         <div>
             <h2 class="text-2xl font-bold text-white font-kode">{title}</h2>
             <hr class="border-2 border-blue-500 w-1/5 my-2" />
@@ -62,9 +64,23 @@
                     </span>
                 {/each}
             </div>
+
             <p class="text-gray-200 my-2">{description}</p>
         </div>
         <div>
+            {#if team.length > 0}
+                <hr class="border-2 border-blue-500 w-1/5 my-2" />
+
+                <div class="flex flex-row gap-2 flex-wrap">
+                    <span class="text-zinc-400 px-2 py-1 rounded-lg">Team:</span
+                    >
+                    {#each team as member}
+                        <span class="text-zinc-400 px-2 py-1 rounded-lg">
+                            {member}
+                        </span>
+                    {/each}
+                </div>
+            {/if}
             <div
                 class="flex flex-row gap-4 justify-end lg:justify-normal {!reverse
                     ? 'lg:justify-end'

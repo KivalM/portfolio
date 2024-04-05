@@ -1,6 +1,6 @@
-<footer class="shadow p-2 md:p-4">
+<footer class="shadow p-4">
     <div
-        class="bg-zinc-800 rounded-lg w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between"
+        class="bg-zinc-800 rounded-lg w-full mx-auto container p-4 md:flex md:items-center md:justify-between"
     >
         <span class="text-sm text-gray-500 sm:text-center"
             >© 2024 <a

@@ -7,6 +7,8 @@ export class Project {
         public tags: string[],
         public images: string[],
         public links: Link[],
+        public team: string[] = [],
+        public category: string = "Personal",
     ) { }
 }
 
@@ -17,7 +19,9 @@ export const projects: Project[] = [
         ["projects/d2d_monster.png", "projects/d2d_map.png", "projects/d2d_start.png",],
         [
             new GitHub("KivalM/Descent-to-Demise", "GitHub repository"),
-        ]
+        ],
+        ["Ali Caunhye", "Pranav Ramcharan", "Yurvan Ramjan"]
+        , "University"
     ),
     new Project("Portfolio",
         "This website",
@@ -31,10 +35,12 @@ export const projects: Project[] = [
     new Project("Shadows of Redemption",
         "A mystery puzzle visual novel where you must solve the mystery of the murder of a eccentric billionaire. Loosely based on the tabletop mystery game 'Sour Grapes of Wrath'",
         ["C++", "DALL-E"],
-        ["projects/sor_start.png", "projects/sor_start.png", "projects/sor_start.png"],
+        ["projects/sor_start.png", "projects/sor_quiz.png", "projects/sor_murder.png"],
         [
             new GitHub("KivalM/COMP315-Semester-Project", "SOR")
-        ]
+        ],
+        ['Ali Caunhye'],
+        "University"
     ),
     new Project("MindMasters",
         "A CMS and e-learning platform focused on interactive lessons.",
@@ -44,16 +50,60 @@ export const projects: Project[] = [
             new Website(
                 "https://mindmasters.co.za", ""
             )
-        ]
+        ],
     ),
     new Project("BrainF*ck JIT Compiler",
         "An application of Finite Automata to compile BrainF*ck via LLVM",
         ["Python", "Automata Theory"],
-        ["projects/bg.jpg"],
+        ["projects/bf.jpg"],
         [
             new GitHub(
-                "KivalM/314-Project", ""
+                "KivalM/315-Semester-Project", ""
             )
+        ],
+        [],
+        "University"
+    ),
+    new Project("CodeBusters",
+        "We built a software system with Tauri, Rust and Svelte, and interfaced it with an LLM to provide analysis on Programming Code.",
+        ["Rust", "Tauri", "LLMs"],
+        ["projects/bf.jpg"],
+        [
+            new GitHub(
+                "KivalM/301-Semester-Project", ""
+            )
+        ], ['Ali Caunhye'],
+        "University"
+    ),
+    new Project("EvoChess",
+        "This was a project done for the UKZN hackathon hosted by BBD Software, where we took second place. We built a unique spin on chess where pieces evolve with takedowns.",
+        ["Svelte", "Webassembly", "Chess"],
+        ["projects/evo_start.png", "projects/evo_map.png"],
+        [
+            new GitHub(
+                "KivalM/EvoChess", ""
+            ), new Website(
+                "https://kivalm.github.io/evochess", ""
+            )
+        ], ['Seevan Ponnan'],
+    ),
+    new Project("KML",
+        "KML is a markup language for defining blog posts. It is designed to be easy to read, write and parse.",
+        ["Rust", "Markup"],
+        [],
+        [
+            new GitHub(
+                "KivalM/kml", ""
+            ),
+        ]
+    ), new Project("SpotBlock",
+        "This was a simple application to disable the playing of advertisements in Spotify for Linux Desktop.",
+        ["Rust", "Linux"],
+        [],
+        [
+            new GitHub(
+                "KivalM/spotblock-rs", ""
+            ),
         ]
     ),
 ]

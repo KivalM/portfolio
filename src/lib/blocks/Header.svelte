@@ -1,16 +1,11 @@
 <script lang="ts">
-    import {
-        Navbar,
-        NavBrand,
-        NavLi,
-        NavUl,
-        NavHamburger,
-    } from "flowbite-svelte";
     import { onMount } from "svelte";
+    import { goto } from "$app/navigation";
+    import { page } from "$app/stores";
 
     let list: HTMLElement;
 
-    let links = [
+    export let links = [
         { name: "Home", href: "#greeter" },
         { name: "About", href: "#about" },
         { name: "Projects", href: "#projects" },
@@ -22,6 +17,20 @@
     let activeClass = "block py-2 px-3 rounded text-blue-500 md:p-0";
     let nonActiveClass = "block py-2 px-3 rounded hover:text-blue-500 md:p-0";
 
+    function navigate(route: string) {
+        if (route.startsWith("#")) {
+            scrollToId(route);
+        } else {
+            goto(route);
+            //
+            links.forEach((link, i) => {
+                if (link.href === route) {
+                    active = i;
+                }
+            });
+        }
+    }
+
     function scrollToId(id: string) {
         const element = document.getElementById(id.slice(1))!;
         window.scrollTo({
@@ -32,25 +41,37 @@
     }
 
     onMount(() => {
-        window.addEventListener("scroll", () => {
-            const scrollPosition = window.scrollY;
+        if ($page.route.id === "/") {
+            window.addEventListener("scroll", () => {
+                const scrollPosition = window.scrollY;
+                links.forEach((link, i) => {
+                    const section = document.getElementById(
+                        link.href.slice(1),
+                    )!;
+                    if (
+                        section.offsetTop - navHeight <= scrollPosition &&
+                        section.offsetTop + section.offsetHeight >
+                            scrollPosition
+                    ) {
+                        active = i;
+                    }
+                });
+                list.classList.add("hidden");
+            });
+        } else {
             links.forEach((link, i) => {
-                const section = document.getElementById(link.href.slice(1))!;
-                if (
-                    section.offsetTop - navHeight <= scrollPosition &&
-                    section.offsetTop + section.offsetHeight > scrollPosition
-                ) {
+                if (link.href === $page.route.id) {
                     active = i;
                 }
             });
-            list.classList.add("hidden");
-        });
+        }
     });
 </script>
 
 <nav
     class="fixed w-full z-50 top-0 start-0 text-white font-kode bg-zinc-900"
     bind:clientHeight={navHeight}
+    id="navbar"
 >
     <div
         class="max-w-screen-xl flex flex-wrap items-center justify-between md:justify-around mx-auto p-4"
@@ -100,7 +121,7 @@
                     <li>
                         <button
                             class={active === i ? activeClass : nonActiveClass}
-                            on:click={() => scrollToId(link.href)}
+                            on:click={() => navigate(link.href)}
                         >
                             {link.name}
                         </button>

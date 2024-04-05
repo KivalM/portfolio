@@ -28,6 +28,7 @@
 	"type": "module",
 	"dependencies": {
 		"@popperjs/core": "^2.11.8",
+		"svelte-vertical-timeline": "^1.0.0",
 		"tailwind-merge": "^2.2.2"
 	}
 }
