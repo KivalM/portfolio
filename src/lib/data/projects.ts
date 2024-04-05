@@ -25,6 +25,7 @@ export const projects: Project[] = [
         ["projects/website.png"],
         [
             new GitHub("KivalM/portfolio", "GitHub repository"),
+            new Website("https://kivalm.com", "Live site")
         ]
     ),
     new Project("Shadows of Redemption",
@@ -39,6 +40,20 @@ export const projects: Project[] = [
         "A CMS and e-learning platform focused on interactive lessons.",
         ["Supabase", "SvelteKit"],
         ["projects/mm.png"],
-        []
+        [
+            new Website(
+                "https://mindmasters.co.za", ""
+            )
+        ]
+    ),
+    new Project("BrainF*ck JIT Compiler",
+        "An application of Finite Automata to compile BrainF*ck via LLVM",
+        ["Python", "Automata Theory"],
+        ["projects/bg.jpg"],
+        [
+            new GitHub(
+                "KivalM/314-Project", ""
+            )
+        ]
     ),
 ]

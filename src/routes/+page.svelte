@@ -3,11 +3,14 @@
     import Blog from "$lib/blocks/Blog.svelte";
     import Jumbotron from "$lib/blocks/Jumbotron.svelte";
     import Projects from "$lib/blocks/Projects.svelte";
+
+    export let data;
+    let { projects, links, blog } = data;
 </script>
 
 <div>
-    <Jumbotron />
+    <Jumbotron {links} />
     <About />
-    <Projects />
-    <Blog />
+    <Projects {projects} />
+    <Blog {blog} />
 </div>

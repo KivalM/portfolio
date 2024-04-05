@@ -1,6 +1,7 @@
 <script lang="ts">
     export let direction: "down" | "up" | "left" | "right" = "down";
     export let color: string = "white";
+    export let size = "6";
     let class_dir = "";
     if (direction === "down") {
         class_dir = "rotate(0deg)";
@@ -19,7 +20,7 @@
     viewBox="0 0 24 24"
     stroke-width="1.5"
     stroke={color}
-    class={`w-6 h-6 inline-block`}
+    class="w-{size} h-{size} inline-block"
     style="transform: {class_dir}"
 >
     <path

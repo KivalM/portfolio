@@ -1,3 +1,14 @@
-// since there's no dynamic data here, we can prerender
-// it so that it gets served as a static asset in production
+import { projects } from '$lib/data/projects';
+import { blog, } from '$lib/data/blogs';
+import { links } from '$lib/data/links';
+
 export const prerender = true;
+
+export function load({ params }) {
+    return {
+        projects: projects.slice(0, 3),
+        blog: blog.slice(0, 3),
+        links: links,
+    };
+
+}

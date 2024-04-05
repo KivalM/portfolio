@@ -1,6 +1,6 @@
 <script lang="ts">
-    import { type blog } from "$lib/data/blogs";
-    export let blog: blog;
+    import { type Blog } from "$lib/data/blogs";
+    export let blog: Blog;
 </script>
 
 <div class="w-full bg-zinc-800 p-6 rounded-xl prose">

@@ -1,7 +1,8 @@
 <script lang="ts">
     import BlogSnippet from "$lib/components/BlogSnippet.svelte";
     import Chevron from "$lib/components/Chevron.svelte";
-    import { blog } from "$lib/data/blogs";
+    import { type Blog } from "$lib/data/blogs";
+    export let blog: Blog[] = [];
 </script>
 
 <section class="container mx-auto" id="blog">
@@ -9,7 +10,7 @@
     <hr class="border-2 border-blue-500 w-1/5 mx-auto my-5" />
     <h3 class="text-3xl font-sans text-center">ಠ ''ಠ</h3>
 
-    <div class="flex flex-col gap-5 justify-center items-center p-2 md:p-6">
+    <div class="flex flex-col gap-5 justify-center items-center p-2 lg:p-6">
         {#each blog as blog}
             <BlogSnippet {blog} />
         {/each}

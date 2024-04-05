@@ -1,14 +1,19 @@
-export interface blog {
-    title: string;
-    slug: string;
-    date: string;
-    excerpt: string;
-    content: string;
-    readingTime: string;
-    tags: string[];
+export class Blog {
+    constructor(
+        public title: string,
+        public slug: string,
+        public date: string,
+        public excerpt: string,
+        public content: string,
+        public readingTime: string,
+        public tags: string[]
+    ) { }
 }
 
-export const blog: blog[] = [
+
+
+
+export const blog: Blog[] = [
     {
         title: "Coming Soon",
         slug: "first-post",

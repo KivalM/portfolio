@@ -1,7 +1,9 @@
 <script lang="ts">
     import Chevron from "$lib/components/Chevron.svelte";
     import ImageCard from "$lib/components/ImageCard.svelte";
-    import { projects } from "$lib/data/projects";
+    import { type Project } from "$lib/data/projects";
+
+    export let projects: Project[] = [];
 </script>
 
 <section class="container mx-auto p-2 py-4 md:p-4" id="projects">
@@ -11,7 +13,7 @@
 
     <div class="flex flex-col gap-5 justify-center items-center">
         {#each projects as project, i}
-            <div class="py-4 md:p-4 w-full md:w-3/4">
+            <div class="py-4 lg:p-4 w-full lg:w-3/4">
                 <ImageCard
                     images={project.images}
                     title={project.title}

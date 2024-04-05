@@ -12,7 +12,7 @@
     <div class="p-2 flex items-center justify-center">
         <i class={link.icon}></i>
     </div>
-    <div class="bg-white p-2 rounded-r text-black">
+    <div class="bg-white p-2 rounded-r text-black flex-grow">
         {link.name}
     </div>
 </a>

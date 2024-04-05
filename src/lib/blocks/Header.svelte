@@ -6,29 +6,61 @@
         NavUl,
         NavHamburger,
     } from "flowbite-svelte";
+    import { onMount } from "svelte";
+
+    let list: HTMLElement;
+
+    let links = [
+        { name: "Home", href: "#greeter" },
+        { name: "About", href: "#about" },
+        { name: "Projects", href: "#projects" },
+        { name: "Blog", href: "#blog" },
+    ];
+
+    let navHeight = 0;
+    let active = 0;
+    let activeClass = "block py-2 px-3 rounded text-blue-500 md:p-0";
+    let nonActiveClass = "block py-2 px-3 rounded hover:text-blue-500 md:p-0";
+
+    function scrollToId(id: string) {
+        const element = document.getElementById(id.slice(1))!;
+        window.scrollTo({
+            top: element.offsetTop - navHeight,
+            behavior: "smooth",
+        });
+        active = links.findIndex((link) => link.href === id);
+    }
+
+    onMount(() => {
+        window.addEventListener("scroll", () => {
+            const scrollPosition = window.scrollY;
+            links.forEach((link, i) => {
+                const section = document.getElementById(link.href.slice(1))!;
+                if (
+                    section.offsetTop - navHeight <= scrollPosition &&
+                    section.offsetTop + section.offsetHeight > scrollPosition
+                ) {
+                    active = i;
+                }
+            });
+            list.classList.add("hidden");
+        });
+    });
 </script>
 
-<Navbar
-    class="px-2 sm:px-4 py-2.5 fixed w-full z-20 top-0 start-0 bg-zinc-900 flex items-center justify-center "
-    let:NavContainer
+<nav
+    class="fixed w-full z-50 top-0 start-0 text-white font-kode bg-zinc-900"
+    bind:clientHeight={navHeight}
 >
-    <NavContainer class="flex justify-center">
-        <NavHamburger />
-        <NavUl
-            activeClass="text-blue-500 font-kode font-bold"
-            nonActiveClass="text-blue-500 font-kode"
-        >
-            <NavLi href="/" active={true}>Home</NavLi>
-            <NavLi href="#about">About</NavLi>
-            <NavLi href="#projects">Projects</NavLi>
-            <NavLi href="#blog">Blog</NavLi>
-        </NavUl>
-    </NavContainer>
-</Navbar>
-<!-- <nav class="fixed w-full z-20 top-0 start-0 font-kode bg-zinc-900">
     <div
-        class="flex flex-wrap items-center justify-between mx-auto p-4 md:justify-center"
+        class="max-w-screen-xl flex flex-wrap items-center justify-between md:justify-around mx-auto p-4"
     >
+        <a href="/" class="flex items-center space-x-3">
+            <span
+                class="self-center text-2xl font-semibold whitespace-nowrap text-blue-400"
+                >KivalM</span
+            >
+        </a>
         <div class="flex md:order-2 space-x-3 md:space-x-0">
             <button
                 data-collapse-toggle="navbar-sticky"
@@ -36,6 +68,7 @@
                 class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
                 aria-controls="navbar-sticky"
                 aria-expanded="false"
+                on:click={() => list.classList.toggle("hidden")}
             >
                 <span class="sr-only">Open main menu</span>
                 <svg
@@ -56,41 +89,24 @@
             </button>
         </div>
         <div
-            class="items-center hidden w-full md:flex md:w-auto md:order-1"
+            class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
             id="navbar-sticky"
+            bind:this={list}
         >
             <ul
                 class="flex flex-col p-4 md:p-0 mt-4 font-medium rounded-lg md:space-x-8 md:flex-row md:mt-0 md:border-0"
             >
-                <li>
-                    <a
-                        href="/"
-                        class="block py-2 px-3 text-white rounded md:bg-transparent md:text-blue-700 md:p-0"
-                        >Home</a
-                    >
-                </li>
-                <li>
-                    <a
-                        href="#about"
-                        class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
-                        >About</a
-                    >
-                </li>
-                <li>
-                    <a
-                        href="#projects"
-                        class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
-                        >Projects</a
-                    >
-                </li>
-                <li>
-                    <a
-                        href="#blog"
-                        class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
-                        >Blog</a
-                    >
-                </li>
+                {#each links as link, i}
+                    <li>
+                        <button
+                            class={active === i ? activeClass : nonActiveClass}
+                            on:click={() => scrollToId(link.href)}
+                        >
+                            {link.name}
+                        </button>
+                    </li>
+                {/each}
             </ul>
         </div>
     </div>
-</nav> -->
+</nav>
