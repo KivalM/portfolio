@@ -28,7 +28,7 @@
 </script>
 
 <div
-    class="bg-zinc-800 shadow-lg rounded-xl grid grid-flow-row md:grid-flow-col md:grid-cols-2 {reverse
+    class="bg-zinc-800 shadow-lg rounded-xl grid grid-flow-row md:grid-flow-col {reverse
         ? 'lg:flex-row-reverse'
         : ''} {images.length > 0 ? 'md:grid-cols-2' : 'md:grid-cols-1'}"
 >
