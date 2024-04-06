@@ -3,9 +3,10 @@ export default {
   content: ['./src/**/*.{html,js,svelte,ts}', "./node_modules/flowbite/**/*.js", './node_modules/flowbite-svelte/**/*.{html,js,svelte,ts}'],
   theme: {
     fontFamily: {
-      'sans': ['Inter var', 'Inter', 'sans-serif'],
+      'sans': ['Noto Sans Display Variable', 'Inter var', 'Inter', 'sans-serif'],
       'nanum': ['Nanum Gothic', 'sans-serif'],
       'roboto': ['Roboto', 'sans-serif'],
+      'noto': ['Noto Sans Display Variable', 'sans-serif'],
       'kode': ['Kode Mono Variable', 'monospace'],
     },
   },

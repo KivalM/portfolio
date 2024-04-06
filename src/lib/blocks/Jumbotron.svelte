@@ -36,7 +36,11 @@
         class="absolute bottom-3 w-full flex flex-col items-center gap-2 justify-center"
     >
         <span class="text-neutral-300 font-kode">Scroll for more</span>
-        <button class="animate-bounce" on:click={scrollIntoView}>
+        <button
+            class="animate-bounce"
+            on:click={scrollIntoView}
+            aria-label="Go to About"
+        >
             <Chevron direction="down" color="white" size="8" />
         </button>
     </div>

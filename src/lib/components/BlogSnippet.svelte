@@ -8,7 +8,7 @@
     <hr class="border-2 border-blue-500 w-1/5 my-2" />
     <div class="flex flex-row gap-2">
         {#each blog.tags as tag}
-            <span class="text-zinc-500 px-2 py-1 rounded-lg">
+            <span class="text-zinc-300 px-2 py-1 rounded-lg">
                 {tag}
             </span>
         {/each}

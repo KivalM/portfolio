@@ -121,6 +121,8 @@
                     <li>
                         <button
                             class={active === i ? activeClass : nonActiveClass}
+                            aria-current={active === i ? "page" : undefined}
+                            aria-label={link.name}
                             on:click={() => navigate(link.href)}
                         >
                             {link.name}

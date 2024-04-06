@@ -1,4 +1,5 @@
 <script lang="ts">
+    import Button from "$lib/components/Button.svelte";
     import Chevron from "$lib/components/Chevron.svelte";
     import ImageCard from "$lib/components/ImageCard.svelte";
     import { type Project } from "$lib/data/projects";
@@ -10,7 +11,9 @@
     <h2 class="text-6xl font-kode text-center">Projects</h2>
     <hr class="border-2 border-blue-500 w-1/5 mx-auto my-5" />
     <h3 class="text-3xl font-sans text-center">(・_・;)</h3>
-
+    <Button href="/projects">
+        <span class="text-sm">View All Projects</span>
+    </Button>
     <div class="flex flex-col gap-5 justify-center items-center">
         {#each projects as project, i}
             <div class="py-4 lg:p-4 w-full lg:w-3/4">
@@ -27,10 +30,6 @@
     </div>
 
     <!-- see more -->
-    <div class="flex justify-center font-kode">
-        <a class=" text-white p-3 animate-pulse" href="/projects">
-            See More <Chevron direction="right" color="white" />
-            <hr class="border border-blue-500 mt-1" />
-        </a>
-    </div>
+
+    <Button href="/projects">See More Projects</Button>
 </section>

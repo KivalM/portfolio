@@ -29,6 +29,7 @@
 	"type": "module",
 	"dependencies": {
 		"@fontsource-variable/kode-mono": "^5.0.1",
+		"@fontsource-variable/noto-sans-display": "^5.0.20",
 		"@popperjs/core": "^2.11.8",
 		"svelte-vertical-timeline": "^1.0.0",
 		"tailwind-merge": "^2.2.2"

@@ -5,6 +5,23 @@
     let { work, university, personal } = data;
 </script>
 
+<svelte:head>
+    <title>Projects</title>
+    <meta
+        name="description"
+        content="Projects page of my personal website: Kival Mahadew"
+    />
+
+    <meta property="og:title" content="Projects" />
+    <meta
+        property="og:description"
+        content="Projects page of my personal website: Kival Mahadew"
+    />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://kivalm.com/projects" />
+</svelte:head>
+
 {#if work.length > 0}
     <h2 class="text-3xl font-bold text-center mt-10 font-kode">Work</h2>
     <div class="grid gap-5 grid-cols-1 lg:grid-cols-2 container mx-auto p-4">
