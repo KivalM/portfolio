@@ -1,14 +1,6 @@
-<span class="icon"></span>
+<script lang="ts">
+    import Img from "@zerodevx/svelte-img";
+    import ferris from "$lib/images/cuddlyferris.png?as=run";
+</script>
 
-<style>
-    .icon {
-        display: inline-block;
-        width: 1.5em;
-        height: 1.5em;
-        background-image: url("$lib/images/cuddlyferris.png");
-        background-size: contain;
-        background-repeat: no-repeat;
-        vertical-align: middle;
-        background-color: transparent;
-    }
-</style>
+<Img class="inline h-4 w-4" src={ferris} alt="Ferris" />

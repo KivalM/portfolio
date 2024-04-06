@@ -42,22 +42,26 @@
 
     onMount(() => {
         if ($page.route.id === "/") {
-            window.addEventListener("scroll", () => {
-                const scrollPosition = window.scrollY;
-                links.forEach((link, i) => {
-                    const section = document.getElementById(
-                        link.href.slice(1),
-                    )!;
-                    if (
-                        section.offsetTop - navHeight <= scrollPosition &&
-                        section.offsetTop + section.offsetHeight >
-                            scrollPosition
-                    ) {
-                        active = i;
-                    }
-                });
-                list.classList.add("hidden");
-            });
+            window.addEventListener(
+                "scroll",
+                () => {
+                    const scrollPosition = window.scrollY;
+                    links.forEach((link, i) => {
+                        const section = document.getElementById(
+                            link.href.slice(1),
+                        )!;
+                        if (
+                            section.offsetTop - navHeight <= scrollPosition &&
+                            section.offsetTop + section.offsetHeight >
+                                scrollPosition
+                        ) {
+                            active = i;
+                        }
+                    });
+                    list.classList.add("hidden");
+                },
+                { passive: true },
+            );
         } else {
             links.forEach((link, i) => {
                 if (link.href === $page.route.id) {

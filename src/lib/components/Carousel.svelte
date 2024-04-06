@@ -3,6 +3,9 @@
     import Img from "@zerodevx/svelte-img";
 </script>
 
-<div>
-    <Img src={images[0].src} alt={images[0].alt} title={images[0].title} />
+<div class="h-full w-full">
+    <Img
+        src={images[0].src}
+        class=" h-full w-full object-cover object-center"
+    />
 </div>

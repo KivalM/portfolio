@@ -1,9 +1,7 @@
 <script lang="ts">
     import type { Link } from "$lib/data/links";
-    import { Carousel } from "flowbite-svelte";
+    import Carousel from "./Carousel.svelte";
     import LinkBox from "./LinkBox.svelte";
-    import Controls from "flowbite-svelte/Controls.svelte";
-    import Slide from "flowbite-svelte/Slide.svelte";
 
     export let images: string[];
     export let title: string;
@@ -28,29 +26,15 @@
 </script>
 
 <div
-    class="bg-zinc-800 shadow-lg rounded-xl grid grid-flow-row md:grid-flow-col {reverse
-        ? 'lg:flex-row-reverse'
-        : ''} {images.length > 0 ? 'md:grid-cols-2' : 'md:grid-cols-1'}"
+    class="bg-zinc-800 shadow-lg rounded-xl grid-rows-1 grid grid-flow-row xl:grid-flow-col
+    {reverse ? 'md:flex-row-reverse' : ''} 
+    {images.length > 0 ? 'xl:grid-cols-2' : 'xl:grid-cols-1'}
+    
+    "
 >
     {#if images.length > 0}
         <div>
-            <Carousel
-                class=""
-                images={new_images}
-                duration={10000}
-                slideDuration={1000}
-                let:Controls
-                let:Indicators
-                imgClass="object-cover object-center"
-            >
-                <div slot="slide" let:Slide let:index class="">
-                    <Slide image={new_images[index]} class="h-full" />
-                </div>
-                {#if new_images.length > 1}
-                    <Controls />
-                    <Indicators />
-                {/if}
-            </Carousel>
+            <Carousel images={new_images}></Carousel>
         </div>
     {/if}
     <div class="p-6 flex flex-col justify-between">

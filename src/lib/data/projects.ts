@@ -1,10 +1,10 @@
 import { GitHub, Website, type Link } from "./links";
 
-const projectImages: Record<string, object> = import.meta.glob('$lib/images/projects/*.*', {
-    query: { run: '' },
+const projectImages = import.meta.glob('$lib/images/projects/*.*', {
+    import: 'default',
     eager: true,
+    query: { as: 'run', fit: "cover" }
 });
-
 console.log(projectImages);
 
 export class Project {
@@ -12,21 +12,17 @@ export class Project {
         public title: string,
         public description: string,
         public tags: string[],
-        public images: string[],
+        public images: any[],
         public links: Link[],
         public team: string[] = [],
         public category: string = "Personal",
     ) {
-        let url = `/src/lib/images/`;
 
+        let url = `/src/lib/images/`;
         // replace images with the actual image paths
         for (let i = 0; i < images.length; i++) {
-
-            console.log(url + images[i]);
-            images[i] = projectImages[url + images[i]].default;
+            images[i] = projectImages[url + images[i]];
         }
-
-        console.log(url);
     }
 }
 
@@ -93,18 +89,7 @@ export const projects: Project[] = [
         ], ['Ali Caunhye'],
         "University"
     ),
-    new Project("EvoChess",
-        "This was a project done for the UKZN hackathon hosted by BBD Software, where we took second place. We built a unique spin on chess where pieces evolve with takedowns.",
-        ["Svelte", "Webassembly", "Chess"],
-        ["projects/evo_start.png", "projects/evo_map.png"],
-        [
-            new GitHub(
-                "KivalM/EvoChess", ""
-            ), new Website(
-                "https://kivalm.github.io/evochess", ""
-            )
-        ], ['Seevan Ponnan'],
-    ),
+
     new Project("KML",
         "KML is a markup language for defining blog posts. It is designed to be easy to read, write and parse.",
         ["Rust", "Markup"],
@@ -123,5 +108,16 @@ export const projects: Project[] = [
                 "KivalM/spotblock-rs", ""
             ),
         ]
+    ), new Project("EvoChess",
+        "This was a project done for the UKZN hackathon hosted by BBD Software, where we took second place. We built a unique spin on chess where pieces evolve with takedowns.",
+        ["Svelte", "Webassembly", "Chess"],
+        ["projects/evo_start.png", "projects/evo_map.png"],
+        [
+            new GitHub(
+                "KivalM/EvoChess", ""
+            ), new Website(
+                "https://kivalm.github.io/evochess", ""
+            )
+        ], ['Seevan Ponnan'],
     ),
 ]
