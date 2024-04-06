@@ -6,8 +6,7 @@ export default {
       'sans': ['Inter var', 'Inter', 'sans-serif'],
       'nanum': ['Nanum Gothic', 'sans-serif'],
       'roboto': ['Roboto', 'sans-serif'],
-      'noto': ['Noto Sans Display', 'sans-serif'],
-      'kode': ['Kode Mono', 'monospace'],
+      'kode': ['Kode Mono Variable', 'monospace'],
     },
   },
   plugins: [

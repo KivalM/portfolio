@@ -14,7 +14,7 @@ export class GitHub extends Link {
             'GitHub',
             'https://github.com/' + url,
             'My github profile',
-            'fa-brands fa-github text-white'
+            'mdi:github'
         );
     }
 }
@@ -25,7 +25,7 @@ export class LinkedIn extends Link {
             'LinkedIn',
             "https://linkedin.com/in/" + url,
             'My linkedin profile',
-            'fa-brands fa-linkedin-in text-white'
+            'mdi:linkedin'
         );
     }
 }
@@ -36,7 +36,7 @@ export class Email extends Link {
             'Email',
             'mailto:' + url,
             'My email',
-            'fa-regular fa-envelope text-white'
+            'mdi:email-outline'
         );
     }
 }
@@ -47,7 +47,7 @@ export class Website extends Link {
             'Website',
             url,
             'My website',
-            'fas fa-globe text-white'
+            'mdi:globe'
         );
     }
 }

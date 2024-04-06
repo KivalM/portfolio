@@ -1,4 +1,7 @@
 <script lang="ts">
+    // Supports weights 400-700
+    import "@fontsource-variable/kode-mono";
+
     import "./styles.css";
     import Footer from "$lib/blocks/Footer.svelte";
     import Header from "$lib/blocks/Header.svelte";

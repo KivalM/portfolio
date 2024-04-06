@@ -20,7 +20,9 @@
         <div class="text-white text-4xl">¯\_(ツ)_/¯</div>
         <h1 class="text-4xl text-white" id="greeter">
             Hello. I'm
-            <span class="text-blue-500 font-kode">Kival Mahadew </span>
+            <span class="text-blue-500 font-kode block md:inline"
+                >Kival Mahadew
+            </span>
         </h1>
 
         <div class="flex flex-col md:flex-row gap-4">
