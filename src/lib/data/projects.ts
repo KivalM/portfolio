@@ -1,5 +1,12 @@
 import { GitHub, Website, type Link } from "./links";
 
+const projectImages: Record<string, object> = import.meta.glob('$lib/images/projects/*.*', {
+    query: { run: '' },
+    eager: true,
+});
+
+console.log(projectImages);
+
 export class Project {
     constructor(
         public title: string,
@@ -9,7 +16,18 @@ export class Project {
         public links: Link[],
         public team: string[] = [],
         public category: string = "Personal",
-    ) { }
+    ) {
+        let url = `/src/lib/images/`;
+
+        // replace images with the actual image paths
+        for (let i = 0; i < images.length; i++) {
+
+            console.log(url + images[i]);
+            images[i] = projectImages[url + images[i]].default;
+        }
+
+        console.log(url);
+    }
 }
 
 export const projects: Project[] = [
