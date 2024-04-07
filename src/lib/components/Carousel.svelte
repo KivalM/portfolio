@@ -45,9 +45,10 @@
     {/each}
 
     {#if images.length > 1}
-        <div class="absolute left-0 top-1/2 justify-between p-2 z-50">
+        <div class="absolute left-0 top-0 h-full p-2 z-50 min-w-6">
             <button
                 aria-label="previous image"
+                class="h-full"
                 on:click={() => {
                     carouselImages = carouselImages.map((img) => {
                         return {
@@ -63,9 +64,10 @@
                 <Chevron direction="left" />
             </button>
         </div>
-        <div class="absolute right-0 h-full top-1/2 justify-between p-2 z-50">
+        <div class="absolute right-0 h-full top-0 p-2 z-50 min-w-6">
             <button
                 aria-label="next image"
+                class="h-full"
                 on:click={() => {
                     carouselImages = carouselImages.map((img) => {
                         return {
