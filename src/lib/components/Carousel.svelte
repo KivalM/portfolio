@@ -87,19 +87,11 @@
             class="absolute bottom-0 w-full flex justify-center gap-2 p-2 z-50"
         >
             {#each carouselImages as image, i}
-                <button
+                <div
                     aria-label="carousel indicator"
                     class="w-2 h-2 rounded-full bg-white"
                     class:opacity-50={image.index !== i}
-                    on:click={() => {
-                        carouselImages = carouselImages.map((img) => {
-                            return {
-                                ...img,
-                                index: i,
-                            };
-                        });
-                    }}
-                ></button>
+                ></div>
             {/each}
         </div>
     {/if}
