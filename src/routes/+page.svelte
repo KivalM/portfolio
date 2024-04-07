@@ -14,8 +14,12 @@
         name="description"
         content="Home page of my personal website: Kival Mahadew"
     />
+    <meta
+        name="keywords"
+        content="Kival M, Kival Mahadew, personal website, blog"
+    />
 
-    <meta property="og:title" content="Home" />
+    <meta property="og:title" content="Home - Kival Mahadew" />
     <meta
         property="og:description"
         content="Home page of my personal website: Kival Mahadew"
