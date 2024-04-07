@@ -88,7 +88,6 @@
         >
             {#each carouselImages as image, i}
                 <div
-                    aria-label="carousel indicator"
                     class="w-2 h-2 rounded-full bg-white"
                     class:opacity-50={image.index !== i}
                 ></div>
