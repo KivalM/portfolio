@@ -3,4 +3,4 @@
     import ferris from "$lib/images/cuddlyferris.png?as=run";
 </script>
 
-<Img class="inline h-4 w-4" src={ferris} alt="Ferris" />
+<Img class="inline w-4" src={ferris} alt="Ferris" />
