@@ -1,12 +1,16 @@
 import adapter from '@sveltejs/adapter-netlify';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import { mdsvex } from 'mdsvex';
+import remarkUnwrapImages from 'remark-unwrap-images';
+import relativeImages from 'mdsvex-relative-images';
+import rehypeRewrite from 'rehype-rewrite';
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	// Consult https://kit.svelte.dev/docs/integrations#preprocessors
 	// for more information about preprocessors
 	preprocess: [vitePreprocess(), mdsvex({
-		extensions: ['.md']
+		extensions: ['.md'],
+		remarkPlugins: [relativeImages, remarkUnwrapImages,],
 	})],
 	extensions: ['.svelte', '.md'],
 	kit: {

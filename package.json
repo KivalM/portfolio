@@ -12,6 +12,7 @@
 		"@iconify/svelte": "^3.1.6",
 		"@neoconfetti/svelte": "^1.0.0",
 		"@sveltejs/adapter-netlify": "^4.1.0",
+		"@sveltejs/enhanced-img": "^0.3.0",
 		"@sveltejs/kit": "^2.0.0",
 		"@sveltejs/vite-plugin-svelte": "^3.0.0",
 		"@tailwindcss/typography": "^0.5.12",
@@ -35,6 +36,9 @@
 		"@popperjs/core": "^2.11.8",
 		"gray-matter": "^4.0.3",
 		"marked": "^13.0.0",
+		"mdsvex-relative-images": "^1.0.3",
+		"rehype-rewrite": "^4.0.2",
+		"remark-unwrap-images": "^4.0.0",
 		"svelte-vertical-timeline": "^1.0.0",
 		"tailwind-merge": "^2.2.2"
 	}

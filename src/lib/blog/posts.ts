@@ -1,4 +1,6 @@
 
+import Img from '@zerodevx/svelte-img'
+
 
 export type Glob = {
     metadata: BlogPost;
@@ -20,7 +22,6 @@ export interface BlogPost {
 function loadAllPosts() {
     let posts = import.meta.glob<Glob>('/src/content/**/*.md', { eager: true });
     // strip /src/content/ from file name
-    console.log(posts)
 
     // remove readme.md from posts
     delete posts['/src/content/README.md']
@@ -33,7 +34,6 @@ function loadAllPosts() {
             // remove post from posts
             delete posts[key]
         } else {
-            console.log(value.metadata)
             value.metadata.slug = key.replace('/src/content/', '').replace('.md', '').replace(' ', '-')
             value.metadata.date = new Date(value.metadata.date).toLocaleDateString('en-US', {
                 year: 'numeric',
