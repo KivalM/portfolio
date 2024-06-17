@@ -1,20 +1,24 @@
 <script lang="ts">
-    import { type Blog } from "$lib/data/blogs";
-    export let blog: Blog;
+    import type { BlogPost } from "$lib/blog/posts";
+    export let post: BlogPost = {} as BlogPost;
 </script>
 
-<div class="w-full bg-zinc-800 p-6 rounded-xl prose">
-    <h2 class="text-2xl font-bold text-white font-kode">{blog.title}</h2>
+<a class="w-full bg-zinc-800 p-6 rounded-xl prose" href={post.url}>
+    <h2 class="text-2xl font-bold text-white font-kode">{post.title}</h2>
     <hr class="border-2 border-blue-500 w-1/5 my-2" />
     <div class="flex flex-row gap-2">
-        {#each blog.tags as tag}
+        <!-- {#each post.tags as tag}
             <span class="text-zinc-300 px-2 py-1 rounded-lg">
                 {tag}
             </span>
-        {/each}
+        {/each} -->
     </div>
     <p class="text-gray-200 my-2">
-        {blog.content.substring(0, 250)}{blog.content.length > 250 ? "..." : ""}
+        {#if post.description}
+            {post.description?.substring(0, 250)}{post.description?.length > 250
+                ? "..."
+                : ""}
+        {/if}
     </p>
     <div class="flex flex-row gap-4">
         <!-- {#each blog.links as link}
@@ -33,4 +37,4 @@
             </a>
         {/each} -->
     </div>
-</div>
+</a>

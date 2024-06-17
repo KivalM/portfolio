@@ -31,7 +31,7 @@
                 <p class="text-lg font-sans p-2">
                     I am a Computer Science Graduate Student, and I am currently
                     working towards my Postgraduate Degree with a focus on
-                    Reinfocement Learning.
+                    Reinforcement Learning.
                 </p>
 
                 <p class="text-lg font-sans p-2">

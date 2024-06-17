@@ -19,6 +19,7 @@
 		"autoprefixer": "^10.4.19",
 		"flowbite": "^2.3.0",
 		"flowbite-svelte": "^0.44.24",
+		"mdsvex": "^0.11.2",
 		"postcss": "^8.4.38",
 		"svelte": "^4.2.7",
 		"svelte-check": "^3.6.0",
@@ -32,6 +33,8 @@
 		"@fontsource-variable/kode-mono": "^5.0.1",
 		"@fontsource-variable/noto-sans-display": "^5.0.20",
 		"@popperjs/core": "^2.11.8",
+		"gray-matter": "^4.0.3",
+		"marked": "^13.0.0",
 		"svelte-vertical-timeline": "^1.0.0",
 		"tailwind-merge": "^2.2.2"
 	}

@@ -5,7 +5,6 @@ const projectImages = import.meta.glob('$lib/images/projects/*.*', {
     eager: true,
     query: { as: 'run', fit: "cover" }
 });
-console.log(projectImages);
 
 export class Project {
     constructor(

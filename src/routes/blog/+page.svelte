@@ -1,38 +1,18 @@
 <script lang="ts">
-    import Button from "$lib/components/Button.svelte";
-    import NavbarPadding from "$lib/components/NavbarPadding.svelte";
+    import type { BlogPost } from "$lib/blog/posts";
+    import BlogSnippet from "$lib/components/BlogSnippet.svelte";
+
+    export let data;
+    let { posts } = data as { posts: BlogPost[] };
+    console.log(data);
 </script>
 
-<svelte:head>
-    <title>Blog</title>
-    <meta
-        name="description"
-        content="Blog page of my personal website: Kival Mahadew"
-    />
+<h3 class="text-3xl font-sans text-center flex justify-center">ಠ ''ಠ</h3>
 
-    <meta property="og:title" content="Blog" />
-    <meta
-        property="og:description"
-        content="Blog page of my personal website: Kival Mahadew"
-    />
+<!-- center -->
 
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://kivalm.com/blog" />
-</svelte:head>
-
-<NavbarPadding />
-<section class="bg-zinc-900 min-h-screen">
-    <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
-        <div class="mx-auto max-w-screen-sm text-center">
-            <h1
-                class="mb-4 text-7xl tracking-tight font-extrabold lg:text-9xl text-blue-500"
-            >
-                Coming Soon
-            </h1>
-            <p class="mb-4 text-3xl tracking-tight font-bold text-white">
-                This page is under construction
-            </p>
-            <Button href="/">Go back home</Button>
-        </div>
-    </div>
-</section>
+<div class="flex flex-col gap-5 justify-center items-center p-2 lg:p-6">
+    {#each posts as post}
+        <BlogSnippet {post} />
+    {/each}
+</div>
