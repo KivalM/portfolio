@@ -29,7 +29,7 @@
     }
 </script>
 
-<div class="bg-zinc-900 text-white">
+<div class="bg-zinc-900 text-white min-h-screen flex flex-col justify-between">
     <Header {links} />
     <main>
         <slot />

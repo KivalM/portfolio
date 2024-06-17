@@ -4,7 +4,6 @@
 
     export let data;
     let post: BlogPost = data as BlogPost;
-    console.log(data);
 </script>
 
 <div class="flex flex-col gap-5 justify-center items-center p-2 lg:p-6">

@@ -12,6 +12,7 @@ export interface BlogPost {
     tags: string[];
     slug: string;
     content: any;
+    pin: boolean;
     url: string;
 }
 
@@ -29,7 +30,6 @@ function loadAllPosts() {
     for (const [key, value] of Object.entries(posts)) {
 
         if (value.metadata === undefined) {
-            console.error(`Missing metadata in ${key} - Removing post from posts.`);
             // remove post from posts
             delete posts[key]
         } else {
@@ -42,6 +42,14 @@ function loadAllPosts() {
             });
 
             // make sure tags are unique and sorted
+            if (value.metadata.tags === undefined) {
+                value.metadata.tags = []
+            }
+
+            // if tags is a string, then make it an array with 1 element
+            if (typeof value.metadata.tags === 'string') {
+                value.metadata.tags = [value.metadata.tags]
+            }
             value.metadata.tags = [...new Set(value.metadata.tags)].sort();
 
             // add a full url to the post
@@ -56,8 +64,20 @@ function loadAllPosts() {
 
 
     }
+
+    // sort posts by date
+    blogposts.sort((a, b) => {
+        return new Date(b.date).getTime() - new Date(a.date).getTime()
+    })
+
+    // move pinned posts to the top
+    let pinned = blogposts.filter(post => post.pin === true)
+    let unpinned = blogposts.filter(post => post.pin !== true)
+    blogposts = pinned.concat(unpinned)
+
+
+
     // return just an array of values
-    console.log(blogposts)
     return blogposts
 }
 

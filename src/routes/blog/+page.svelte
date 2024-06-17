@@ -4,7 +4,6 @@
 
     export let data;
     let { posts } = data as { posts: BlogPost[] };
-    console.log(data);
 </script>
 
 <h3 class="text-3xl font-sans text-center flex justify-center">ಠ ''ಠ</h3>

@@ -20,4 +20,5 @@
 </svelte:head>
 
 <NavbarPadding />
+
 <slot />
