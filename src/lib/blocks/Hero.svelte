@@ -6,7 +6,7 @@
 	<div class="hero-content text-center">
 		<div>
 			<div class="flex flex-col gap-4">
-				<div class="text-4xl">¯\_(ツ)_/¯</div>
+				<div class="text-4xl font-jp">¯\_(ツ)_/¯</div>
 				<h1 class="text-5xl">
 					Hello. I'm
 					<span class="text-primary font-kode font-bold">Kival</span>

@@ -1,7 +1,7 @@
 <section id="about" class="container mx-auto lg:p-4 font-kode">
 	<h2 class="text-6xl text-center">About Me</h2>
 	<hr class="border-2 border-primary w-1/5 mx-auto my-5" />
-	<h3 class="text-3xl font-sans text-center">(⌐■_■)</h3>
+	<h3 class="text-3xl font-jp text-center">(⌐■_■)</h3>
 
 	<div class="w-full py-4 lg:p-4">
 		<div class=" p-2 grid md:grid-cols-2 gap-4">
