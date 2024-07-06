@@ -48,6 +48,7 @@
 	"dependencies": {
 		"@fontsource-variable/kode-mono": "^5.0.3",
 		"@fontsource-variable/noto-sans-display": "^5.0.21",
+		"@fontsource/roboto": "^5.0.13",
 		"rehype-rewrite": "^4.0.2",
 		"remark-unwrap-images": "^4.0.0"
 	}
