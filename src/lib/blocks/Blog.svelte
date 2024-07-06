@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { projects } from '$lib/projects/Projects';
+	import { posts } from '$lib/blog/Blog';
+	import BlogPostPreview from '$lib/blog/Components/BlogPostPreview.svelte';
 	import Icon from '@iconify/svelte';
 </script>
 
@@ -8,6 +9,10 @@
 	<hr class="border-2 border-blue-500 w-1/5 mx-auto my-5" />
 	<h3 class="text-3xl font-sans text-center">ಠ ''ಠ</h3>
 	<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-3">
+		{#each posts as post}
+			<BlogPostPreview {post} />
+		{/each}
+
 		<!-- see all card -->
 		<button class="btn btn-accent h-full">
 			<a href="/projects" class="flex justify-center items-center">

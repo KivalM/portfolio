@@ -17,10 +17,10 @@ export default {
   ],
   daisyui: {
     themes: [
-      "light", // first one will be the default theme
+      "winter", // first one will be the default theme
       {
         dark: {
-          ...require("daisyui/src/theming/themes")["dark"],
+          ...require("daisyui/src/theming/themes")["black"],
           primary: "#2563eb",
           secondary: "#10b981",
           "base-content": "#f9fafb",

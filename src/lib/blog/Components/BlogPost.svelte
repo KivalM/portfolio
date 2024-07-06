@@ -1,7 +1,22 @@
 <script lang="ts">
 	import type { BlogPost } from '../Blog';
+	import SvelteSeo from 'svelte-seo';
 	export let post: BlogPost;
 </script>
+
+<SvelteSeo
+	title={post.title}
+	description={post.description}
+	canonical={`https://kivalm.com/{post.url}`}
+	keywords={post.tags.join(', ')}
+	openGraph={{
+		title: post.title,
+		description: post.description,
+		url: 'https://kivalm.com/{post.url}',
+		type: 'website',
+		site_name: 'Kival Mahadew'
+	}}
+/>
 
 <div class="w-full rounded-xl prose prose-invert">
 	<h2 class="text-2xl font-bold text-white font-kode">{post.title}</h2>

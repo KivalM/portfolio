@@ -1,10 +1,36 @@
 <script>
+	import { onMount } from 'svelte';
 	import Theme from './Theme.svelte';
 
 	let open = false;
+
+	// set the open state to false when the user clicks outside the menu
+	// @ts-ignore
+	const handleClick = ({ target }) => {
+		if (!target.closest('.navbar')) {
+			open = false;
+		}
+	};
+
+	// add the event listener when the component is mounted
+	onMount(() => {
+		document.addEventListener('click', handleClick);
+
+		// highligh the current page in the navbar
+		const links = document.querySelectorAll('.menu a');
+
+		links.forEach((link) => {
+			// @ts-ignore
+			if (link.href === window.location.href) {
+				link.classList.add('text-primary');
+			} else {
+				link.classList.remove('text-primary');
+			}
+		});
+	});
 </script>
 
-<div class="navbar bg-base-100 container mx-auto font-kode">
+<div class=" navbar bg-base-100 container mx-auto font-kode">
 	<div class="navbar-start">
 		<a class="text-2xl text-primary" href="/">KivalM</a>
 	</div>
