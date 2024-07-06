@@ -1,8 +1,8 @@
 <script lang="ts">
+	import Pill from '$lib/components/button/Pill.svelte';
 	import type { BlogPost } from '../Blog';
 	import SvelteSeo from 'svelte-seo';
 	export let post: BlogPost;
-	console.log(post);
 </script>
 
 <SvelteSeo
@@ -21,6 +21,11 @@
 
 <div class="w-full rounded-xl prose">
 	<h2 class="text-2xl font-bold text-primary font-kode">{post.title}</h2>
+	{#if post.date}
+		<p class="my-2">
+			{post.date}
+		</p>
+	{/if}
 	<div class="flex flex-row gap-2">
 		{#each post.tags as tag}
 			<span class="text-primary px-2 py-1 rounded-lg">
@@ -33,6 +38,12 @@
 			{post.description}
 		{/if}
 	</p>
+
+	{#if post.repo}
+		<a href={post.repo} target="_blank" rel="noopener noreferrer">
+			<Pill name="Repository" icon="mdi:github"></Pill>
+		</a>
+	{/if}
 	<hr class="border-2 border-primary my-2" />
 
 	<svelte:component this={post.content}></svelte:component>

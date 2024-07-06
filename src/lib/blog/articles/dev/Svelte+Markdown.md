@@ -7,7 +7,7 @@ tags:
 aliases: 
 description: Integrating markdown .MD files into a SvelteKit project.
 date: 2024-07-06
-repo:
+repo: https://github.com/KivalM/Svelte-Markdown-Tutorial
 ---
 # Prerequisites
 This assumes you have a basic SvelteKit project setup, and are just looking for a way to integrate markdown files into your site. But for the sake of completeness, we can create one from scratch. 
