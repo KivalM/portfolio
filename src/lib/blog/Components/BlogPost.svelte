@@ -2,6 +2,7 @@
 	import type { BlogPost } from '../Blog';
 	import SvelteSeo from 'svelte-seo';
 	export let post: BlogPost;
+	console.log(post);
 </script>
 
 <SvelteSeo

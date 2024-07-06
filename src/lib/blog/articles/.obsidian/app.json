@@ -1,5 +1,6 @@
 {
   "showUnsupportedFiles": true,
   "attachmentFolderPath": "_attachments",
-  "useMarkdownLinks": true
+  "useMarkdownLinks": true,
+  "newLinkFormat": "relative"
 }
