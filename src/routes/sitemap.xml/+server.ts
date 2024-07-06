@@ -1,6 +1,6 @@
 import { posts } from '$lib/blog/Blog.js';
 
-const site = 'https://kivalm.com'; // change this to reflect your domain
+const site = 'https://www.kivalm.com'; // change this to reflect your domain
 const pages: string[] = [
     "/projects",
     "/blog"
