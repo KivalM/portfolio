@@ -14,7 +14,7 @@
 				</h1>
 			</div>
 			<div class="divider"></div>
-			<div class="flex flex-row gap-2 justify-center">
+			<div class="flex flex-row gap-2 justify-center flex-wrap">
 				<Pill name="LinkedIn" icon="mdi:linkedin" />
 				<Pill name="GitHub" icon="mdi:github" />
 				<Pill name="Twitter" icon="mdi:twitter" />
