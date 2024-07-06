@@ -17,7 +17,6 @@ export default {
   ],
   daisyui: {
     themes: [
-      "winter", // first one will be the default theme
       {
         dark: {
           ...require("daisyui/src/theming/themes")["black"],
@@ -27,6 +26,7 @@ export default {
           "base-100": "#18181b",
         },
       },
+      "winter", // first one will be the default theme
     ],
   },
 };
