@@ -21,10 +21,9 @@
 
 		links.forEach((link) => {
 			// @ts-ignore
-			if (link.href === window.location.href) {
+			if (location.pathname.includes(link.getAttribute('href'))) {
+				links.forEach((link) => link.classList.remove('text-primary'));
 				link.classList.add('text-primary');
-			} else {
-				link.classList.remove('text-primary');
 			}
 		});
 	});

@@ -30,13 +30,19 @@ One of the most significant advantages of using Arch Linux is the educational va
 Before diving into the installation, it’s essential to back up your data and familiarize yourself with the Arch Wiki. Having a second device to follow the installation guide can be very helpful. Additionally, ensure that your hardware is compatible with Arch Linux.
 ## Installation
 
-    Download the ISO: Get the latest Arch Linux ISO from the official website.
-    Create a Bootable USB: Use tools like Rufus (Windows) or dd (Linux) to create a bootable USB drive.
-    Boot from USB: Restart your computer and boot from the USB drive.
-    Partition Your Disk: Use tools like fdisk or cfdisk to partition your hard drive.
-    Install the Base System: Mount the partitions and install the base system using the pacstrap command.
-    Configure the System: Generate an fstab file, set the timezone, locale, and install necessary packages like a bootloader.
-    Reboot and Configure Further: Reboot into your new system and start configuring your environment, including the installation of a desktop environment or window manager.
+    **Download the ISO:** Get the latest Arch Linux ISO from the official website.
+    
+    **Create a Bootable USB:** Use tools like Rufus (Windows) or dd (Linux) to create a bootable USB drive.
+    
+    **Boot from USB:** Restart your computer and boot from the USB drive.
+    
+    **Partition Your Disk:** Use tools like fdisk or cfdisk to partition your hard drive.
+    
+    **Install the Base System:** Mount the partitions and install the base system using the pacstrap command.
+    
+    **Configure the System:** Generate an fstab file, set the timezone, locale, and install necessary packages like a bootloader.
+    
+    **Reboot and Configure Further:** Reboot into your new system and start configuring your environment, including the installation of a desktop environment or window manager.
 
 ## Post-Installation
 
