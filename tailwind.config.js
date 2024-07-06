@@ -8,6 +8,7 @@ export default {
       'roboto': ['Roboto', 'sans-serif'],
       'noto': ['Noto Sans Display Variable', 'sans-serif'],
       'kode': ['Kode Mono Variable', 'monospace'],
+      'jp': ['Noto Sans JP', 'sans-serif'],
     },
     extend: {}
   },
