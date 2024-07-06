@@ -1,0 +1,187 @@
+{
+  "main": {
+    "id": "d4353d9a2e210302",
+    "type": "split",
+    "children": [
+      {
+        "id": "94dd9d850c5aa62a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c8b88485a204d526",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "linux/Arch/Arch Linux.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "0504404f6f126eff",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Hello.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "d68174848aef6231",
+    "type": "split",
+    "children": [
+      {
+        "id": "e0f516b418824ad5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "87759893c694f845",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "2fd83bbe5dd370b3",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "59f05ab5a4720a95",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "f738998d4e5ef070",
+    "type": "split",
+    "children": [
+      {
+        "id": "c7a49c08254cb1ff",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "50ed3521764bd1ad",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "linux/Arch/Arch Linux.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "ddb5a7924e3930bf",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "linux/Arch/Arch Linux.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "979de36476f0f0d0",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "117d47f9a807a74f",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "linux/Arch/Arch Linux.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "c8b88485a204d526",
+  "lastOpenFiles": [
+    "Hello.md",
+    "_attachments/archlinux-logo-light-1200dpi.7ccd81fd52dc.png",
+    "archlinux-logo-light-1200dpi.7ccd81fd52dc.png",
+    "_attachments",
+    "dev/blog/Svelte+Markdown.md",
+    "linux/Arch/Arch Linux.md",
+    "linux/Nix/1. What is Nix.md",
+    "linux/Nix/0. Nix.md",
+    "dev/blog/Hosting.md",
+    "2024-06-17.md",
+    "ADHD",
+    "productivity",
+    "README.md",
+    "Untitled.canvas",
+    "dev/blog/Untitled",
+    "dev/blog",
+    "_templates/Blog Post.md",
+    "_templates",
+    "dev",
+    "cs",
+    "linux/Nix",
+    "Linux/Nix.md",
+    "linux/Arch"
+  ]
+}

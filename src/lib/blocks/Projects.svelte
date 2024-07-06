@@ -12,11 +12,10 @@
 			<enhanced:img src={project.images[0]} class="aspect-video rounded-box w-full" />
 		{/each}
 		<!-- see all card -->
-		<button class="btn btn-accent h-full">
-			<a href="/projects" class="flex justify-center items-center">
-				<span>See All</span>
-				<Icon icon="bi:arrow-right" class="w-6 h-6 ml-2" />
-			</a>
-		</button>
+
+		<a class="btn btn-accent h-full" href="/projects">
+			<span>See All</span>
+			<Icon icon="bi:arrow-right" class="w-6 h-6 ml-2" />
+		</a>
 	</div>
 </section>

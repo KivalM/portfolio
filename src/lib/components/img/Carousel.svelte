@@ -1,12 +1,11 @@
 <script lang="ts">
-	export let images: { src: string; alt: string; title: string }[] | string[] = [];
+	export let images: string[] = [];
 	export let duration: number = 50200;
 	let index = 0;
 	import { onMount } from 'svelte';
 
 	const next = () => {
 		index = index === images.length - 1 ? 0 : index + 1;
-		console.log(index);
 	};
 
 	const prev = () => {

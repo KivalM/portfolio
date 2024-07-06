@@ -24,8 +24,8 @@ export class Project {
         let url = `/src/lib/projects/images/`;
         // replace images with the actual image paths
         for (let i = 0; i < images.length; i++) {
+            // @ts-ignore
             images[i] = imageModules[url + images[i]].default;
-            console.log(images[i]);
         }
     }
 }

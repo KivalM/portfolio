@@ -2,17 +2,8 @@
 	import Pill from '$lib/components/button/Pill.svelte';
 	import Carousel from '$lib/components/img/Carousel.svelte';
 	import type { Project } from '$lib/projects/Projects';
-	import { onMount } from 'svelte';
-	import { createEventDispatcher } from 'svelte';
-
-	const dispatch = createEventDispatcher();
-
-	onMount(() => {
-		dispatch('title', { title: 'Project Card' });
-	});
 
 	export let project: Project;
-	console.log(project);
 </script>
 
 <div class="card card-compact bg-base-200 shadow-xl">
