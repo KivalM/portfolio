@@ -15,10 +15,15 @@
 			</div>
 			<div class="divider"></div>
 			<div class="flex flex-row gap-2 justify-center flex-wrap">
-				<Pill name="LinkedIn" icon="mdi:linkedin" />
-				<Pill name="GitHub" icon="mdi:github" />
-				<Pill name="Twitter" icon="mdi:twitter" />
-				<Pill name="Email" icon="mdi:email" />
+				<a href="https://www.linkedin.com/in/kivalm/">
+					<Pill name="LinkedIn" icon="mdi:linkedin" /></a
+				>
+				<a href="https://github.com/KivalM/">
+					<Pill name="GitHub" icon="mdi:github" />
+				</a>
+				<a href="mailto:kmahadew21@gmail.com">
+					<Pill name="Email" icon="mdi:email" />
+				</a>
 			</div>
 		</div>
 	</div>
