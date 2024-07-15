@@ -11,13 +11,14 @@
 	class:bg-base-200={post.pin}
 	href={post.url}
 >
-	{#if post.pin}
-		<div class="flex flex-row gap-2">
-			<Icon icon="mdi:pin" class="w-6 h-6 text-accent" />
-		</div>
-	{/if}
+	<h2 class="text-2xl font-bold font-kode flex items-center gap-2">
+		{#if post.pin}
+			<div class="flex flex-row gap-2">
+				<Icon icon="mdi:pin" class="w-6 h-6 text-accent" />
+			</div>
+		{/if}{post.title}
+	</h2>
 
-	<h2 class="text-2xl font-bold font-kode">{post.title}</h2>
 	{#if post.date}
 		<p class=" my-2">
 			{post.date}
