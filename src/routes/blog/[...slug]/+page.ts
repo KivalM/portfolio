@@ -7,7 +7,6 @@ export const load = async ({ params }) => {
     let post = posts.find(post => post.slug === params.slug);
 
 
-    console.log(post);
     // 404 if post not found
     if (!post) {
         return {

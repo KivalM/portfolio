@@ -1,7 +1,4 @@
 <script lang="ts">
-	import Navbar from '$lib/components/navigation/navbar.svelte';
-	import SvelteSeo from 'svelte-seo';
-
 	import ProjectCard from './ProjectCard.svelte';
 	import { projects } from '$lib/projects/Projects';
 </script>
