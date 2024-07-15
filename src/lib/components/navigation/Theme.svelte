@@ -1,3 +1,12 @@
+<script lang="ts">
+	import { onMount } from 'svelte';
+	import { themeChange } from 'theme-change';
+
+	onMount(() => {
+		themeChange(false);
+	});
+</script>
+
 <label class="swap swap-rotate">
 	<!-- this hidden checkbox controls the state -->
 	<input type="checkbox" class="theme-controller" value="winter" />

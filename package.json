@@ -51,6 +51,7 @@
 		"@fontsource-variable/noto-sans-jp": "^5.0.19",
 		"@fontsource/roboto": "^5.0.13",
 		"rehype-rewrite": "^4.0.2",
-		"remark-unwrap-images": "^4.0.0"
+		"remark-unwrap-images": "^4.0.0",
+		"theme-change": "^2.5.0"
 	}
 }
