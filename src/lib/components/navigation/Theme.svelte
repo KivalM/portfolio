@@ -9,7 +9,7 @@
 
 <label class="swap swap-rotate">
 	<!-- this hidden checkbox controls the state -->
-	<input type="checkbox" class="theme-controller" value="winter" />
+	<input type="checkbox" data-toggle-theme="dark,winter" />
 
 	<!-- sun icon -->
 	<svg
