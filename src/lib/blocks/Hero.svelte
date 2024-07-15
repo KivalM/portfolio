@@ -15,13 +15,13 @@
 			</div>
 			<div class="divider"></div>
 			<div class="flex flex-row gap-2 justify-center flex-wrap">
-				<a href="https://www.linkedin.com/in/kivalm/">
+				<a href="https://www.linkedin.com/in/kivalm/" target="_blank">
 					<Pill name="LinkedIn" icon="mdi:linkedin" /></a
 				>
-				<a href="https://github.com/KivalM/">
+				<a href="https://github.com/KivalM/" target="_blank">
 					<Pill name="GitHub" icon="mdi:github" />
 				</a>
-				<a href="mailto:kmahadew21@gmail.com">
+				<a href="mailto:kmahadew21@gmail.com" target="_blank">
 					<Pill name="Email" icon="mdi:email" />
 				</a>
 			</div>
