@@ -5,10 +5,11 @@ export const prerender = true;
 
 export const load = async ({ params }) => {
     let post = posts.find(post => post.slug === params.slug);
-
+    console.log(`Post: ${post}`);
 
     // 404 if post not found
     if (!post) {
+        console.log(`Post not found`);
         return {
             status: 404,
             error: new Error(`Post not found`)
