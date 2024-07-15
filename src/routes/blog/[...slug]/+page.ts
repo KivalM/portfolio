@@ -4,6 +4,8 @@ import type { EntryGenerator } from './$types';
 export const prerender = true;
 
 export const load = async ({ params }) => {
+    console.log(`Posts: ${posts}`);
+    console.log(`Params: ${params}`);
     let post = posts.find(post => post.slug === params.slug);
     console.log(`Post: ${post}`);
 
