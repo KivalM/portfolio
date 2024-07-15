@@ -5,9 +5,9 @@ export const prerender = true;
 
 const site = 'https://www.kivalm.com'; // change this to reflect your domain
 const pages: string[] = [
-  "projects",
-  "blog",
-  "work"
+  "/projects",
+  "/blog",
+  "/work"
 ];
 
 posts.forEach(post => {
@@ -35,7 +35,7 @@ const sitemap = (pages: string[]) => `<?xml version="1.0" encoding="UTF-8" ?>
     .map(
       (page) => `
   <url>
-    <loc>${site}/${page}</loc>
+    <loc>${site}${page}</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
