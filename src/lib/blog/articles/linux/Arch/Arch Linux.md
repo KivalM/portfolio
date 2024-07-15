@@ -3,8 +3,10 @@ title: Arch Linux for the misguided
 tags:
   - ArchLinux
   - Linux
+  - AI
 aliases: 
 description: This is entirely AI generated as a test post for this blog.
+date: 2024-07-01
 ---
 ![](../../_attachments/archlinux-logo-light-1200dpi.7ccd81fd52dc.png)
 # Introduction
