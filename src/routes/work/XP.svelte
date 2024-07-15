@@ -24,8 +24,8 @@
 		<ul class="list-disc list-inside ml-4">
 			<li>Graduated at the top of my class in Computer Science</li>
 			<li>
-				Currently pursuing postgraduate studies with a focus on Reinforcement Learning and AI,
-				specializing in human-AI cooperation
+				Currently pursuing postgraduate studies with a focus on Reinforcement Learning and
+				AI,specializing in human-AI cooperation
 			</li>
 		</ul>
 	</section>

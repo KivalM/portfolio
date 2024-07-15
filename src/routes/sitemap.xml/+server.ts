@@ -6,7 +6,8 @@ export const prerender = true;
 const site = 'https://www.kivalm.com'; // change this to reflect your domain
 const pages: string[] = [
   "/projects",
-  "/blog"
+  "/blog",
+  "/work"
 ];
 
 posts.forEach(post => {
