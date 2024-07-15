@@ -1,10 +1,25 @@
 <script lang="ts">
 	import type { BlogPost } from '$lib/blog/Blog';
 	import BlogPostPreview from '$lib/blog/Components/BlogPostPreview.svelte';
+	import SvelteSeo from 'svelte-seo';
 
 	export let data;
 	let { posts } = data as { posts: BlogPost[] };
 </script>
+
+<SvelteSeo
+	title="Blog - Kival Mahadew"
+	description="Kival Mahadew's personal blog."
+	canonical="https://kivalm.com/blog"
+	keywords="kival mahadew, kivalm, kival, mahadew, personal website, blog"
+	openGraph={{
+		title: 'Blog - Kival Mahadew',
+		description: "Kival Mahadew's personal blog.",
+		url: 'https://kivalm.com/blog',
+		type: 'website',
+		site_name: 'Kival Mahadew'
+	}}
+/>
 
 <section class="container mx-auto">
 	<h2 class="text-6xl font-kode text-center">Blog</h2>

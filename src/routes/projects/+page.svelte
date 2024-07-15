@@ -1,25 +1,11 @@
 <script lang="ts">
 	import Navbar from '$lib/components/navigation/navbar.svelte';
-	import ProjectCard from './ProjectCard.svelte';
 	import SvelteSeo from 'svelte-seo';
+
+	import ProjectCard from './ProjectCard.svelte';
 	import { projects } from '$lib/projects/Projects';
 </script>
 
-<SvelteSeo
-	title="Projects"
-	description="A collection of projects I've worked on."
-	canonical="https://www.kivalm.com/projects"
-	keywords="projects, portfolio, work, kival mahadew"
-	openGraph={{
-		title: 'Projects',
-		description: "A collection of projects I've worked on.",
-		url: 'https://www.kivalm.com/projects',
-		type: 'website',
-		site_name: 'Kival Mahadew'
-	}}
-/>
-
-<Navbar />
 <section class="container mx-auto">
 	<h2 class="text-6xl font-kode text-center">Projects</h2>
 	<hr class="border-2 border-blue-500 w-1/5 mx-auto my-5" />

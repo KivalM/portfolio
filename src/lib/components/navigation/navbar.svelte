@@ -16,7 +16,7 @@
 	onMount(() => {
 		document.addEventListener('click', handleClick);
 
-		// highligh the current page in the navbar
+		// highlight the current page in the navbar
 		const links = document.querySelectorAll('.menu a');
 
 		links.forEach((link) => {
@@ -40,6 +40,7 @@
 			<li><a href="/#about">/About</a></li>
 			<li><a href="/projects">/Projects</a></li>
 			<li><a href="/blog">/Blog</a></li>
+			<li><a href="/work">/Work</a></li>
 		</ul>
 	</div>
 	<div class="navbar-end gap-4">
@@ -82,5 +83,6 @@
 		<li><a href="/#about">/About</a></li>
 		<li><a href="/projects">/Projects</a></li>
 		<li><a href="/blog">/Blog</a></li>
+		<li><a href="/work">/Work</a></li>
 	</ul>
 {/if}

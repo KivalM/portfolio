@@ -7,5 +7,8 @@
 	import '@fontsource-variable/noto-sans-jp';
 </script>
 
-<slot />
-<Footer />
+<!-- keep footer at bottom -->
+<div class="flex flex-col min-h-screen">
+	<slot />
+	<Footer />
+</div>

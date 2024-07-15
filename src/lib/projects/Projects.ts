@@ -31,6 +31,18 @@ export class Project {
 }
 
 export const projects: Project[] = [
+    new Project("Rustle",
+        "A wordle clone written in Rust",
+        ["Rust", "Leptos", "Wordle", "WebAssembly"],
+        ["d2d_map.png"],
+        [
+            new GitHub(
+                "KivalM/rustle", "Rustle Github"
+            ),
+            new Website("https://wordle.kivalm.com", "Live site")
+
+        ]
+    ),
     new Project("Descent to Demise",
         "A backrooms inspired survival horror game where you must escape a maze of rooms filled with monsters.",
         ["Unity", "C#", "Procedural generation"],
