@@ -1,6 +1,6 @@
 <div class="max-w-4xl mx-auto shadow-md rounded-lg p-6">
 	<h1 class="text-4xl font-bold text-primary font-kode mb-4">
-		John Doe <span class="icon-home"></span>
+		Kival Mahadew <span class="icon-home"></span>
 	</h1>
 
 	<section class="mb-6">
