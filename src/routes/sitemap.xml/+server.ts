@@ -1,5 +1,8 @@
 import { posts } from '$lib/blog/Blog.js';
 
+export const prerender = true;
+
+
 const site = 'https://www.kivalm.com'; // change this to reflect your domain
 const pages: string[] = [
   "/projects",
@@ -9,7 +12,6 @@ const pages: string[] = [
 posts.forEach(post => {
   pages.push(post.url);
 });
-export const prerender = true;
 
 export async function GET({ }) {
   const body = sitemap(pages);
