@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Pill from '$lib/components/button/Pill.svelte';
+	import Icon from '@iconify/svelte';
 	import type { BlogPost } from '../Blog';
 	import SvelteSeo from 'svelte-seo';
 	export let post: BlogPost;
@@ -44,7 +45,13 @@
 			<Pill name="Repository" icon="mdi:github"></Pill>
 		</a>
 	{/if}
-	<hr class="border-2 border-primary my-2" />
+	<hr class="border-2 border-primary my-4" />
 
 	<svelte:component this={post.content}></svelte:component>
+
+	<!-- back to /blog -->
+	<a href="/blog" class="btn btn-secondary gap-2">
+		<Icon icon="mdi:arrow-left" class="w-6 h-6" />
+		<div>Back to Blog</div></a
+	>
 </div>

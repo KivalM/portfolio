@@ -1,38 +1,11 @@
-# create-svelte
+# My personal website
+See it in action at [kivalm.com](https://kivalm.com)
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+This is a personal website created using the [SvelteKit](https://kit.svelte.dev/) framework. It is a SvelteKit site that can preprocess markdown files into Svelte components. This allows me to write blog posts in markdown and have it integrated into a fully pre-rendered site.
 
-## Creating a project
+The site is hosted for free on [Netlify](https://www.netlify.com/), and the source code is available on [GitHub](https://github.com/kivalm/portfolio).
 
-If you're seeing this, you've probably already done this step. Congrats!
+# Blog posts
+The blog posts are written in markdown and are located in the `src/lib/blog/articles` directory. Each markdown file is a blog post, and the front matter is used to provide metadata about the post.
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+If you want to see more about how to do this in SvelteKit, check out the article [here](https://kivalm.com/blog/dev/Svelte+Markdown).
