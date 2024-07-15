@@ -15,6 +15,6 @@
 			<label for="message">Message</label>
 			<textarea id="message" name="message" class="textarea textarea-bordered"></textarea>
 		</div>
-		<button class="btn btn-accent">Submit</button>
+		<button class="btn btn-accent" type="submit">Submit</button>
 	</form>
 </section>
