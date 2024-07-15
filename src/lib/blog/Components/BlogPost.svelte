@@ -33,7 +33,7 @@
 			</span>
 		{/each}
 	</div>
-	<p class="text-neutral-content my-2">
+	<p class="my-2">
 		{#if post.description}
 			{post.description}
 		{/if}
