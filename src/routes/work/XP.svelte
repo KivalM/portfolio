@@ -1,8 +1,14 @@
+<script>
+	import Icon from '@iconify/svelte';
+</script>
+
 <div class="max-w-4xl mx-auto shadow-md rounded-lg p-6">
 	<h1 class="text-4xl font-bold text-primary font-kode mb-4">
-		Kival Mahadew <span class="icon-home"></span>
+		Kival Mahadew <span class="text-2xl font-normal text-secondary">| Full Stack Developer</span>
 	</h1>
-
+	<a href="/cv.pdf" download="cv.pdf" class="btn btn-secondary font-kode m-2">
+		<Icon icon="akar-icons:download" class="mr-2" /> Download CV
+	</a>
 	<section class="mb-6">
 		<h2 class="text-2xl font-semibold text-accent">
 			🌟 Full Stack Developer | AI Enthusiast | DevOps Specialist
