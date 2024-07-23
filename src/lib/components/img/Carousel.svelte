@@ -23,7 +23,7 @@
 
 <div class="carousel w-full">
 	<div class="carousel-item relative w-full">
-		<enhanced:img src={images[index]} class="w-full aspect-video object-cover" />
+		<enhanced:img src={images[index]} class="w-full aspect-video object-cover" alt="carousel" />
 	</div>
 
 	{#if images.length > 1}

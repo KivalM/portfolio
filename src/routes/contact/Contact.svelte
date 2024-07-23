@@ -1,7 +1,4 @@
-<section class="container mx-auto max-w-lg" id="contact">
-	<h2 class="text-3xl font-kode text-center">Contact Me</h2>
-	<hr class="border-2 border-blue-500 w-1/5 mx-auto my-5" />
-
+<section class="container mx-auto max-w-lg">
 	<form class="flex flex-col gap-2 p-4" name="contact" method="POST" data-netlify="true">
 		<div class="flex flex-col gap-4">
 			<label for="name">Name</label>
@@ -15,6 +12,6 @@
 			<label for="message">Message</label>
 			<textarea id="message" name="message" class="textarea textarea-bordered"></textarea>
 		</div>
-		<button class="btn btn-accent" type="submit">Submit</button>
+		<button class="btn btn-secondary" type="submit">Submit</button>
 	</form>
 </section>

@@ -1,13 +1,19 @@
 <script>
 	import Icon from '@iconify/svelte';
+	import CV from '$lib/assets/cv.pdf';
+
+	// function to download the CV
+	const downloadCV = () => {
+		window.open(CV, '_blank');
+	};
 </script>
 
 <div class="max-w-4xl mx-auto shadow-md rounded-lg p-6 prose">
 	<h1 class="text-4xl font-bold text-primary font-kode mb-4 text-center">
 		Kival Mahadew <span class="text-2xl font-normal text-secondary">| Full Stack Developer</span>
-		<a href="/cv.pdf" download="cv.pdf" class="btn btn-secondary font-kode m-2 text-center">
+		<button on:click={downloadCV} class="btn btn-secondary font-kode m-2 text-center">
 			<Icon icon="akar-icons:download" class="mr-2" /> Download CV
-		</a>
+		</button>
 	</h1>
 
 	<section class="mb-6">
