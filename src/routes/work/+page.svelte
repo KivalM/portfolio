@@ -13,18 +13,7 @@
 </section>
 
 <!-- my work experience and specialization -->
-<section>
-	<div class="w-full py-4 lg:p-4">
-		<div class=" p-2 grid lg:grid-cols-2 gap-4">
-			<div class="p-4 rounded-xl shadow-xl">
-				<Xp />
-			</div>
-			<!-- keep contact centered in view while the screen is on the div -->
-			<div class="h-full block">
-				<div class="sticky top-1/4 flex justify-center flex-col">
-					<Contact />
-				</div>
-			</div>
-		</div>
-	</div>
+<section class="container mx-auto">
+	<Xp />
+	<Contact />
 </section>

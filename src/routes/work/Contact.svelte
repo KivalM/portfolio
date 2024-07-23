@@ -1,4 +1,4 @@
-<section>
+<section class="container mx-auto max-w-lg" id="contact">
 	<h2 class="text-3xl font-kode text-center">Contact Me</h2>
 	<hr class="border-2 border-blue-500 w-1/5 mx-auto my-5" />
 

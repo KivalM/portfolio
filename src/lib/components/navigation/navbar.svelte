@@ -41,6 +41,7 @@
 			<li><a href="/projects">/Projects</a></li>
 			<li><a href="/blog">/Blog</a></li>
 			<li><a href="/work">/Work</a></li>
+			<li><a href="/work#contact">/Contact</a></li>
 		</ul>
 	</div>
 	<div class="navbar-end gap-4">
@@ -84,5 +85,6 @@
 		<li><a href="/projects">/Projects</a></li>
 		<li><a href="/blog">/Blog</a></li>
 		<li><a href="/work">/Work</a></li>
+		<li><a href="/work#contact">/Contact</a></li>
 	</ul>
 {/if}
