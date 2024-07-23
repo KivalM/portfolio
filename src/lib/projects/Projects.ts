@@ -104,6 +104,17 @@ export const projects: Project[] = [
             )
         ], ['Ali Caunhye'],
         "University"
+    ), new Project("EvoChess",
+        "This was a project done for the UKZN hackathon hosted by BBD Software, where we took second place. We built a unique spin on chess where pieces evolve with takedowns.",
+        ["Svelte", "Webassembly", "Chess"],
+        ["evo_start.png", "evo_map.png"],
+        [
+            new GitHub(
+                "KivalM/EvoChess", ""
+            ), new Website(
+                "https://kivalm.github.io/evochess", ""
+            )
+        ], ['Seevan Ponnan'],
     ),
 
     new Project("KML",
@@ -124,16 +135,5 @@ export const projects: Project[] = [
                 "KivalM/spotblock-rs", ""
             ),
         ]
-    ), new Project("EvoChess",
-        "This was a project done for the UKZN hackathon hosted by BBD Software, where we took second place. We built a unique spin on chess where pieces evolve with takedowns.",
-        ["Svelte", "Webassembly", "Chess"],
-        ["evo_start.png", "evo_map.png"],
-        [
-            new GitHub(
-                "KivalM/EvoChess", ""
-            ), new Website(
-                "https://kivalm.github.io/evochess", ""
-            )
-        ], ['Seevan Ponnan'],
     ),
 ]

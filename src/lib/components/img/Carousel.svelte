@@ -26,6 +26,11 @@
 		<enhanced:img src={images[index]} class="w-full aspect-video object-cover" alt="carousel" />
 	</div>
 
+	<!-- preload other images -->
+	{#each images as image, i}
+		<enhanced:img src={image} class="hidden" alt="carousel" />
+	{/each}
+
 	{#if images.length > 1}
 		<div class="absolute left-5 right-5 top-1/4 flex -translate-y-1/2 transform justify-between">
 			<button class="btn btn-circle" on:click={next}>❮</button>
