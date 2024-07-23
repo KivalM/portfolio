@@ -6,7 +6,7 @@
 	export let project: Project;
 </script>
 
-<div class="card card-compact bg-base-200 shadow-xl">
+<div class="card card-compact bg-base-200 shadow-xl border-primary border">
 	<figure>
 		{#if project.images.length > 0}
 			<Carousel images={project.images} />
