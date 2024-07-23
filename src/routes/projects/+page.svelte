@@ -22,7 +22,7 @@
 	<h3 class="text-3xl font-jp text-center">(・_・;)</h3>
 
 	{#each Object.keys(groupedProjects) as category}
-		<h2 class="text-4xl font-kode text-center divider m-8">{category}</h2>
+		<h2 class="text-4xl font-kode text-center divider divider-neutral m-8">{category}</h2>
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 my-8">
 			{#each groupedProjects[category] as project}
 				<ProjectCard {project} />
