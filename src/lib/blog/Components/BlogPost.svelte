@@ -21,7 +21,7 @@
 	}}
 />
 
-<div class="w-full rounded-xl prose">
+<div class="w-full rounded-xl prose md:max-w-xl lg:max-w-2xl">
 	<h2 class="text-2xl font-bold text-primary font-kode">{post.title}</h2>
 	{#if post.date}
 		<p class="my-2">
