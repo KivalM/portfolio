@@ -59,7 +59,7 @@ export const projects: Project[] = [
         ["website.png"],
         [
             new GitHub("KivalM/portfolio", "GitHub repository"),
-            new Website("https://www.kivalm.com", "Live site")
+            new Website("https://kivalm.com", "Live site")
         ]
     ),
     new Project("Shadows of Redemption",

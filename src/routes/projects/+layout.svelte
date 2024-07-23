@@ -6,12 +6,12 @@
 <SvelteSeo
 	title="Projects"
 	description="A collection of projects I've worked on."
-	canonical="https://www.kivalm.com/projects"
+	canonical="https://kivalm.com/projects"
 	keywords="projects, portfolio, work, kival mahadew"
 	openGraph={{
 		title: 'Projects',
 		description: "A collection of projects I've worked on.",
-		url: 'https://www.kivalm.com/projects',
+		url: 'https://kivalm.com/projects',
 		type: 'website',
 		site_name: 'Kival Mahadew'
 	}}
