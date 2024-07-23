@@ -10,12 +10,12 @@
 <SvelteSeo
 	title={post.title}
 	description={post.description}
-	canonical={`https://kivalm.com/` + post.url}
+	canonical={`https://kivalm.com` + post.url}
 	keywords={post.tags.join(', ')}
 	openGraph={{
 		title: post.title,
 		description: post.description,
-		url: 'https://kivalm.com/{post.url}',
+		url: 'https://kivalm.com{post.url}',
 		type: 'website',
 		site_name: 'Kival Mahadew'
 	}}
