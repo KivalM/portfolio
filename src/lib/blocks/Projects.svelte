@@ -13,7 +13,7 @@
 		{/each}
 		<!-- see all card -->
 
-		<a class="btn btn-accent h-full" href="/projects">
+		<a class="btn btn-secondary h-full" href="/projects">
 			<span>See All</span>
 			<Icon icon="bi:arrow-right" class="w-6 h-6 ml-2" />
 		</a>

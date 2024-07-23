@@ -14,7 +14,7 @@
 		{/each}
 
 		<!-- see all card -->
-		<button class="btn btn-accent h-full">
+		<button class="btn btn-secondary h-full">
 			<a href="/projects" class="flex justify-center items-center">
 				<span>See All</span>
 				<Icon icon="bi:arrow-right" class="w-6 h-6 ml-2" />
