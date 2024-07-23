@@ -20,11 +20,11 @@ npm install
 npm run dev --open
 ```
 Now we should have the demo app running in the browser.
-![](../_attachments/Pasted%20image%2020240706145101.png)
+![SvelteKit Demo](../_attachments/Pasted%20image%2020240706145101.png)
 
 # Create some MD files
 You can place these anywhere but lets add the files to `src/lib/md/`. Create a `TopLevel.md` here, then create a `src/lib/md/folder/SecondLevel.md`. I personally use Obisidan as a markdown editor, and thus this is more of a guide for mixing Obsidian vaults with a SvelteKit application.
-![](../_attachments/Pasted%20image%2020240706145440.png)
+![Code Directory](../_attachments/Pasted%20image%2020240706145440.png)
 You can add as many or as little files as you want.
 
 # Markdown preprocessing
@@ -135,4 +135,4 @@ import { md } from '$lib/md';
 
 # Viewing the pages
 Now head over to `http://localhost:5173/md/toplevel` and `http://localhost:5173/md/folder/secondlevel` and you should see the content of your markdown files.
-![](../_attachments/Pasted%20image%2020240706170603.png)
+![Example Demo](../_attachments/Pasted%20image%2020240706170603.png)

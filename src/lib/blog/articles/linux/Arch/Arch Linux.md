@@ -8,7 +8,7 @@ aliases:
 description: This is entirely AI generated as a test post for this blog.
 date: 2024-07-01
 ---
-![](../../_attachments/archlinux-logo-light-1200dpi.7ccd81fd52dc.png)
+![Arch Logo](../../_attachments/archlinux-logo-light-1200dpi.7ccd81fd52dc.png)
 # Introduction
 Venturing into the world of Linux can be both exciting and overwhelming. For many, the ultimate badge of honor is mastering Arch Linux. Known for its simplicity, flexibility, and cutting-edge nature, Arch Linux stands out as a favorite among seasoned Linux enthusiasts. However, its reputation for being user-unfriendly can mislead some into thinking it’s an insurmountable challenge. This post is dedicated to clearing up misconceptions and guiding those who might be misguided about what Arch Linux truly offers.
 # The Myth of Arch Linux

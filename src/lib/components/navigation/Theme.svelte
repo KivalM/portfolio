@@ -7,9 +7,9 @@
 	});
 </script>
 
-<label class="swap swap-rotate">
+<label class="swap swap-rotate" for="theme-toggle">
 	<!-- this hidden checkbox controls the state -->
-	<input type="checkbox" data-toggle-theme="dark,winter" />
+	<input type="checkbox" data-toggle-theme="dark,winter" id="theme-toggle" />
 
 	<!-- sun icon -->
 	<svg

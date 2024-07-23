@@ -9,7 +9,11 @@
 	<h3 class="text-3xl font-jp text-center">(・_・;)</h3>
 	<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-3">
 		{#each projects.slice(0, 4) as project, i}
-			<enhanced:img src={project.images[0]} class="aspect-video rounded-box w-full" />
+			<enhanced:img
+				src={project.images[0]}
+				class="aspect-video rounded-box w-full"
+				alt="Project Demo"
+			/>
 		{/each}
 		<!-- see all card -->
 

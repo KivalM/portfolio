@@ -12,6 +12,7 @@ export interface BlogPost {
     content: any;
     pin: boolean;
     url: string;
+    repo: string | null;
 }
 
 // Get all posts and add metadata
