@@ -5,6 +5,15 @@
 	import '@fontsource-variable/noto-sans-display';
 	import '@fontsource/roboto';
 	import '@fontsource-variable/noto-sans-jp';
+
+	import posthog from 'posthog-js';
+	import { browser } from '$app/environment';
+	import { beforeNavigate, afterNavigate } from '$app/navigation';
+
+	if (browser) {
+		beforeNavigate(() => posthog.capture('$pageleave'));
+		afterNavigate(() => posthog.capture('$pageview'));
+	}
 </script>
 
 <!-- keep footer at bottom -->

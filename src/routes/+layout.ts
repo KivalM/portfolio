@@ -6,7 +6,8 @@ export const load = async () => {
     if (browser) {
         posthog.init(POSTHOG_KEY, {
             api_host: 'https://us.i.posthog.com',
-            person_profiles: 'identified_only'
+            person_profiles: 'identified_only', capture_pageview: false,
+            capture_pageleave: false
         });
     }
     return;
