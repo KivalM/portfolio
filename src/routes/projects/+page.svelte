@@ -1,19 +1,23 @@
 <script lang="ts">
 	import ProjectCard from './ProjectCard.svelte';
-	import { projects } from '$lib/projects/Projects';
+	import { Project, projects } from '$lib/projects/Projects';
 
 	// group projects by category
-	const groupedProjects = projects.reduce((acc, project) => {
-		if (!acc[project.category]) {
-			acc[project.category] = [];
-		}
-
-		acc[project.category].push(project);
-
-		return acc;
-	}, {});
-
-	console.log(groupedProjects);
+	const groupedProjects = projects.reduce(
+		(
+			acc: {
+				[key: string]: Project[];
+			},
+			project
+		) => {
+			if (!acc[project.category]) {
+				acc[project.category] = [];
+			}
+			acc[project.category].push(project);
+			return acc;
+		},
+		{}
+	);
 </script>
 
 <section class="container mx-auto">

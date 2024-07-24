@@ -4,30 +4,42 @@ import type { EntryGenerator } from './$types';
 export const prerender = true;
 
 export const load = async ({ params }) => {
-    let post = posts.find(post => post.slug.toLowerCase() === params.slug.toLowerCase());
-
-    // 404 if post not found
+    let post = posts[params.slug.toLowerCase()];
+    console.log(post);
+    // if post not found then look in series
     if (!post) {
-        console.log(`Post not found`);
+        for (const [key, value] of Object.entries(posts)) {
+            if ('posts' in value) {
+                for (const subpost of value.posts) {
+                    if (subpost.slug === params.slug.toLowerCase()) {
+                        console.log(subpost);
+                        post = subpost;
+                    }
+                }
+            }
+        }
+    }
+
+
+    if (!post)
         return {
             status: 404,
             error: new Error(`Post not found`)
         };
-    }
-
     return post;
 }
 
 export const entries: EntryGenerator = () => {
-    return posts.map(post => ({
-        slug: post.slug,
-        type: 'page',
-        title: post.title,
-        description: post.description,
-        date: post.date,
-        tags: post.tags,
-        url: post.url,
-        pin: post.pin
-    }));
+    let slugs = [];
+    for (const [key, value] of Object.entries(posts)) {
+        if ('posts' in value) {
+            for (const post of value.posts) {
+                slugs.push({ slug: post.slug });
+            }
+        }
+        slugs.push({ slug: value.slug });
+    }
+
+    return slugs;
 };
 

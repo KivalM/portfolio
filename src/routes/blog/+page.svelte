@@ -4,7 +4,6 @@
 	import SvelteSeo from 'svelte-seo';
 
 	export let data;
-	let { posts } = data as { posts: BlogPost[] };
 </script>
 
 <SvelteSeo
@@ -28,7 +27,7 @@
 	<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 mt-3"></div>
 
 	<div class="flex flex-col gap-5 justify-center items-center p-2 lg:p-6">
-		{#each posts as post}
+		{#each Object.values(data.posts) as post}
 			<BlogPostPreview {post} />
 		{/each}
 	</div>

@@ -10,8 +10,13 @@ const pages: string[] = [
   "/work"
 ];
 
-posts.forEach(post => {
+Object.values(posts).forEach((post) => {
   pages.push(post.url);
+  if ('posts' in post) {
+    post.posts.forEach((subpost) => {
+      pages.push(subpost.url);
+    });
+  }
 });
 
 export async function GET({ }) {

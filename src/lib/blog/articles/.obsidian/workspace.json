@@ -8,24 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "c8b88485a204d526",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "dev/Svelte+Markdown.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "0504404f6f126eff",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Hello.md",
+                "file": "dev/rustle/0. wordle-wasm.md",
                 "mode": "source",
                 "source": false
               }
@@ -97,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "dev/Svelte+Markdown.md",
+                "file": "dev/rustle/0. wordle-wasm.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "dev/Svelte+Markdown.md",
+                "file": "dev/rustle/0. wordle-wasm.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "dev/Svelte+Markdown.md"
+                "file": "dev/rustle/0. wordle-wasm.md"
               }
             }
           }
@@ -158,16 +146,31 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "c8b88485a204d526",
+  "active": "87759893c694f845",
   "lastOpenFiles": [
+    "dev/rustle/2. tailwind-leptos.md",
+    "dev/rustle/0. wordle-wasm.md",
+    "dev/rustle/3. host-trunk-netlify.md",
+    "dev/rustle/1. rust-leptos-setup.md",
+    "Hello.md",
+    "2024-07-06.md",
+    "_attachments/Pasted image 20240723220421.png",
+    "_attachments/Pasted image 20240723220355.png",
+    "_attachments/Pasted image 20240723215234.png",
+    "dev/Svelte+Markdown.md",
+    "_templates/Blog Post.md",
+    "_attachments/Pasted image 20240723214738.png",
+    "README.md",
+    "Untitled.canvas",
+    "dev/Rustle/2. Routing in Leptos.md",
+    "2024-07-23.md",
+    "dev/rustle",
     "linux/Arch/Arch Linux.md",
     "dev/blog/Svelte+Markdown.md",
-    "dev/Svelte+Markdown.md",
     "_attachments/Pasted image 20240706170603.png",
     "_attachments/Pasted image 20240706145101.png",
     "_attachments/Pasted image 20240706145440.png",
     "_attachments/Pasted image 20240706170548.png",
-    "Hello.md",
     "_attachments/archlinux-logo-light-1200dpi.7ccd81fd52dc.png",
     "archlinux-logo-light-1200dpi.7ccd81fd52dc.png",
     "_attachments",
@@ -177,16 +180,12 @@
     "2024-06-17.md",
     "ADHD",
     "productivity",
-    "README.md",
-    "Untitled.canvas",
     "dev/blog/Untitled",
     "dev/blog",
-    "_templates/Blog Post.md",
     "_templates",
     "dev",
     "cs",
     "linux/Nix",
-    "Linux/Nix.md",
-    "linux/Arch"
+    "Linux/Nix.md"
   ]
 }
