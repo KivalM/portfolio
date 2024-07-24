@@ -51,6 +51,7 @@
 		"@fontsource-variable/noto-sans-display": "^5.0.21",
 		"@fontsource-variable/noto-sans-jp": "^5.0.19",
 		"@fontsource/roboto": "^5.0.13",
+		"posthog-js": "^1.149.0",
 		"rehype-rewrite": "^4.0.2",
 		"remark-unwrap-images": "^4.0.0",
 		"theme-change": "^2.5.0"
