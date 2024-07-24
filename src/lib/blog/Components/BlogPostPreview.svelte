@@ -45,6 +45,9 @@
 	</a>
 
 	{#if 'posts' in post}
-		<div class="card h-full bg-accent prose mb-7 ml-9 rounded-lg"></div>
+		<div class="card h-full bg-base-300 prose mb-7 ml-9 rounded-lg"></div>
+		<div class="card h-full bg-base-300 prose mb-7 ml-9 rounded-lg"></div>
+		<div class="card h-full bg-base-300 prose mb-7 ml-9 rounded-lg"></div>
+		<div class="card h-full bg-base-200 prose mb-7 ml-9 rounded-lg"></div>
 	{/if}
 </div>
