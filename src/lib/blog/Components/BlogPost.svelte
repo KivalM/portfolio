@@ -25,77 +25,97 @@
 	}}
 />
 
-<div class="container mx-auto rounded-xl md:max-w-xl lg:max-w-2xl">
-	<h2 class="text-2xl font-bold text-primary font-kode">{post.title}</h2>
+<div class="container mx-auto rounded-xl md:max-w-xl lg:max-w-2xl bg-gradient-to-br from-base-100 to-base-200 shadow-2xl border border-base-300 p-8">
+	<div class="mb-6">
+		<h2 class="text-4xl font-bold text-primary font-kode mb-4 leading-tight">{post.title}</h2>
 
-	{#if post.date}
-		<p class="my-2 font-kode text-right">
-			{post.date}
-		</p>
-	{/if}
+		{#if post.date}
+			<div class="flex items-center gap-2 text-sm text-base-content/60 bg-base-200/50 rounded-lg px-4 py-2 border border-base-300/50 mb-4 w-fit ml-auto">
+				<Icon icon="mdi:calendar" class="w-4 h-4" />
+				<span class="font-kode">{post.date}</span>
+			</div>
+		{/if}
 
-	<div class="flex flex-row gap-2">
-		{#each post.tags as tag}
-			<span class="text-secondary px-2 py-1 rounded-lg">
-				{tag}
-			</span>
-		{/each}
+		<div class="flex flex-wrap gap-2 mb-6">
+			{#each post.tags as tag}
+				<span class="badge badge-primary badge-lg font-medium shadow-sm">
+					{tag}
+				</span>
+			{/each}
+		</div>
+
+		{#if post.description}
+			<div class="bg-base-200/30 rounded-lg p-4 border-l-4 border-primary mb-6">
+				<p class="text-base-content/80 leading-relaxed">
+					{post.description}
+				</p>
+			</div>
+		{/if}
+
+		{#if post.repo}
+			<div class="mb-6">
+				<a href={post.repo} target="_blank" rel="noopener noreferrer" class="hover:scale-105 transition-transform duration-200">
+					<Pill name="Repository" icon="mdi:github"></Pill>
+				</a>
+			</div>
+		{/if}
 	</div>
 
-	{#if post.description}
-		<p class="my-2">
-			{post.description}
-		</p>
-	{/if}
-
-	{#if post.repo}
-		<a href={post.repo} target="_blank" rel="noopener noreferrer">
-			<Pill name="Repository" icon="mdi:github"></Pill>
-		</a>
-	{/if}
-
-	<hr class="border-2 border-primary my-4" />
+	<hr class="border-2 border-gradient-to-r from-primary via-primary/50 to-transparent my-8" />
 
 	{#if 'posts' in post}
-		<p class="my-2 font-kode text-right text-accent">
-			{post.posts.length} posts
-		</p>
+		<div class="bg-accent/10 rounded-lg p-4 border border-accent/20 mb-6">
+			<div class="flex items-center gap-2 text-accent">
+				<Icon icon="mdi:book-multiple" class="w-5 h-5" />
+				<p class="font-kode font-semibold">
+					{post.posts.length} posts in this series
+				</p>
+			</div>
+		</div>
 
-		<div class="grid grid-cols-1 gap-4 mt-3">
+		<div class="grid grid-cols-1 gap-6 mt-6">
 			{#each Object.values(post.posts) as subpost}
 				<BlogPostPreview post={subpost} />
 			{/each}
 		</div>
 	{:else}
-		<div class="prose rounded-xl md:max-w-xl lg:max-w-2xl">
+		<div class="prose prose-lg max-w-none bg-base-50/50 rounded-xl p-6 border border-base-300/30">
 			<post.content></post.content>
 		</div>
 	{/if}
-
-	<!-- back to /blog -->
 </div>
-<div class="container mx-auto md:max-w-xl lg:max-w-2xl">
+
+<div class="container mx-auto md:max-w-xl lg:max-w-2xl mt-8">
 	{#if !('posts' in post)}
 		{#if post.next || post.previous}
-			<div class="flex flex-row gap-2 justify-between my-4">
-				{#if post.previous}
-					<a href={post.previous} class="btn btn-secondary">
-						<Icon icon="mdi:arrow-left" class="w-6 h-6" />
-						<div>Previous</div>
-					</a>
-				{/if}
-				<div></div>
-				{#if post.next}
-					<a href={post.next} class="btn btn-secondary">
-						<div>Next</div>
-						<Icon icon="mdi:arrow-right" class="w-6 h-6" />
-					</a>
-				{/if}
+			<div class="bg-gradient-to-r from-base-100 to-base-200 rounded-xl p-6 border border-base-300 shadow-xl mb-6">
+				<div class="flex flex-row gap-4 justify-between">
+					{#if post.previous}
+						<a href={post.previous} class="btn btn-secondary btn-lg gap-2 hover:scale-105 transition-transform duration-200">
+							<Icon icon="mdi:arrow-left" class="w-6 h-6" />
+							<div>Previous</div>
+						</a>
+					{:else}
+						<div></div>
+					{/if}
+					
+					{#if post.next}
+						<a href={post.next} class="btn btn-secondary btn-lg gap-2 hover:scale-105 transition-transform duration-200">
+							<div>Next</div>
+							<Icon icon="mdi:arrow-right" class="w-6 h-6" />
+						</a>
+					{:else}
+						<div></div>
+					{/if}
+				</div>
 			</div>
 		{/if}
 	{/if}
-	<a href="/blog" class="btn btn-secondary gap-2">
-		<Icon icon="mdi:arrow-left" class="w-6 h-6" />
-		<div>Back to Blog</div>
-	</a>
+	
+	<div class="text-center">
+		<a href="/blog" class="btn btn-primary btn-lg gap-3 hover:scale-105 transition-transform duration-200 shadow-lg">
+			<Icon icon="mdi:arrow-left" class="w-6 h-6" />
+			<div>Back to Blog</div>
+		</a>
+	</div>
 </div>
