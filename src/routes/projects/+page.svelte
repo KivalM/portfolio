@@ -138,22 +138,5 @@
 				</div>
 			{/if}
 		</div>
-
-		<!-- GitHub Integration Footer -->
-		<div class="mt-20 text-center">
-			<div class="bg-gradient-to-br from-base-100 to-base-200 rounded-xl shadow-lg border border-base-300 p-8 max-w-2xl mx-auto">
-				<div class="flex items-center justify-center gap-3 mb-4">
-					<Icon icon="mdi:github" class="w-8 h-8 text-primary" />
-					<h3 class="text-xl font-bold text-primary">Powered by GitHub</h3>
-				</div>
-				<p class="text-base-content/70 mb-4">
-					All projects are automatically synced from my GitHub repositories, ensuring you always see the latest work.
-				</p>
-				<div class="flex items-center justify-center gap-2 text-sm text-base-content/60">
-					<Icon icon="mdi:clock-fast" class="w-4 h-4" />
-					<span>Last updated: {new Date().toLocaleDateString()}</span>
-				</div>
-			</div>
-		</div>
 	</div>
 </section>
