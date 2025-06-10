@@ -3,7 +3,11 @@
 	import Carousel from '$lib/components/img/Carousel.svelte';
 	import type { Project } from '$lib/projects/Projects';
 
-	export let project: Project;
+	interface Props {
+		project: Project;
+	}
+
+	let { project }: Props = $props();
 </script>
 
 <div class="card card-compact bg-base-200 shadow-xl border-primary border">

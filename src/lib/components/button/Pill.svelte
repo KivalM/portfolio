@@ -1,7 +1,10 @@
 <script lang="ts">
 	import Icon from '@iconify/svelte';
 
-	export let { name, icon } = { name: 'LinkedIn', icon: 'mdi-light:home' };
+	let { name = 'LinkedIn', icon = 'mdi-light:home' } = $props<{
+		name?: string;
+		icon?: string;
+	}>();
 </script>
 
 <button class="btn btn-primary p-0 border-0 flex flex-row join hover:scale-105">

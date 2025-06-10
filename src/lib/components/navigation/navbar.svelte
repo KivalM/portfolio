@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte';
 	import Theme from './Theme.svelte';
 
-	let open = false;
+	let open = $state(false);
 
 	// set the open state to false when the user clicks outside the menu
 	// @ts-ignore

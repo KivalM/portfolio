@@ -4,7 +4,11 @@
 	import type { BlogPost, BlogSeries } from '../Blog';
 	import SvelteSeo from 'svelte-seo';
 	import BlogPostPreview from './BlogPostPreview.svelte';
-	export let post: BlogPost | BlogSeries;
+	interface Props {
+		post: BlogPost | BlogSeries;
+	}
+
+	let { post }: Props = $props();
 </script>
 
 <SvelteSeo
@@ -64,7 +68,7 @@
 		</div>
 	{:else}
 		<div class="prose rounded-xl md:max-w-xl lg:max-w-2xl">
-			<svelte:component this={post.content}></svelte:component>
+			<post.content></post.content>
 		</div>
 	{/if}
 

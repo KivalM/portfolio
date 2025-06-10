@@ -1,6 +1,11 @@
 <script lang="ts">
 	import Navbar from '$lib/components/navigation/navbar.svelte';
 	import SvelteSeo from 'svelte-seo';
+	interface Props {
+		children?: import('svelte').Snippet;
+	}
+
+	let { children }: Props = $props();
 </script>
 
 <SvelteSeo
@@ -18,4 +23,4 @@
 />
 
 <Navbar />
-<slot></slot>
+{@render children?.()}

@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import Footer from '$lib/components/Footer.svelte';
 	import '../app.css';
 	import '@fontsource-variable/kode-mono';
@@ -9,6 +9,11 @@
 	import posthog from 'posthog-js';
 	import { browser } from '$app/environment';
 	import { beforeNavigate, afterNavigate } from '$app/navigation';
+	interface Props {
+		children?: import('svelte').Snippet;
+	}
+
+	let { children }: Props = $props();
 
 	if (browser) {
 		beforeNavigate(() => posthog.capture('$pageleave'));
@@ -18,6 +23,6 @@
 
 <!-- keep footer at bottom -->
 <div class="flex flex-col min-h-screen">
-	<slot />
+	{@render children?.()}
 	<Footer />
 </div>

@@ -1,7 +1,11 @@
 <script lang="ts">
 	import Icon from '@iconify/svelte';
 	import { type BlogPost, type BlogSeries } from '../Blog';
-	export let post: BlogPost | BlogSeries;
+	interface Props {
+		post: BlogPost | BlogSeries;
+	}
+
+	let { post }: Props = $props();
 </script>
 
 <div class="stack w-full">

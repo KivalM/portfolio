@@ -3,7 +3,7 @@
 	import BlogPostPreview from '$lib/blog/Components/BlogPostPreview.svelte';
 	import SvelteSeo from 'svelte-seo';
 
-	export let data;
+	let { data } = $props();
 </script>
 
 <SvelteSeo

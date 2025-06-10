@@ -1,8 +1,12 @@
 <script lang="ts">
-	export let images: string[] = [];
-	export let duration: number = 50200;
-	let index = 0;
+	let index = $state(0);
 	import { onMount } from 'svelte';
+	interface Props {
+		images?: string[];
+		duration?: number;
+	}
+
+	let { images = [], duration = 50200 }: Props = $props();
 
 	const next = () => {
 		index = index === images.length - 1 ? 0 : index + 1;
@@ -33,8 +37,8 @@
 
 	{#if images.length > 1}
 		<div class="absolute left-5 right-5 top-1/4 flex -translate-y-1/2 transform justify-between">
-			<button class="btn btn-circle" on:click={next}>❮</button>
-			<button class="btn btn-circle" on:click={prev}>❯</button>
+			<button class="btn btn-circle" onclick={next}>❮</button>
+			<button class="btn btn-circle" onclick={prev}>❯</button>
 		</div>
 	{/if}
 </div>
