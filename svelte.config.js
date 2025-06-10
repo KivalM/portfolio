@@ -1,7 +1,7 @@
 import adapter from '@sveltejs/adapter-netlify';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
-import { mdsvex, escapeSvelte } from 'mdsvex';
+import { mdsvex } from 'mdsvex';
 import remarkUnwrapImages from 'remark-unwrap-images';
 import relativeImages from 'mdsvex-relative-images';
 import rehypeRewrite from 'rehype-rewrite';
