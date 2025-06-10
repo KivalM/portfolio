@@ -49,11 +49,7 @@
 						<div class="text-2xl font-bold text-secondary">Latest</div>
 						<div class="text-sm text-base-content/60">Updated</div>
 					</div>
-					<div class="w-px h-8 bg-base-300"></div>
-					<div class="flex items-center gap-2">
-						<div class="w-2 h-2 bg-accent rounded-full animate-pulse"></div>
-						<div class="text-sm text-base-content/60">Live</div>
-					</div>
+			
 				</div>
 			</div>
 		</div>

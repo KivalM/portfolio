@@ -93,7 +93,6 @@
 						<div class="text-3xl font-bold text-warning">{categories.length}</div>
 						<div class="text-sm text-base-content/60">Categories</div>
 					</div>
-					<div class="w-px h-10 bg-base-300 hidden sm:block"></div>
 				</div>
 			</div>
 		</div>
