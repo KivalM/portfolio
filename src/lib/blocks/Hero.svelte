@@ -2,11 +2,12 @@
 	import Pill from '$lib/components/button/Pill.svelte';
 </script>
 
-<section class="hero bg-gradient-to-br from-base-100 via-base-200 to-base-100 text-base-content h-full relative overflow-hidden">
+<section class="hero bg-gradient-to-br from-base-100 via-base-200 to-base-100 text-base-content h-full w-full relative overflow-hidden">
 	<!-- Background decoration -->
 	<div class="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-secondary/5"></div>
 	<div class="absolute top-20 left-20 w-32 h-32 bg-primary/10 rounded-full blur-xl"></div>
 	<div class="absolute bottom-20 right-20 w-40 h-40 bg-secondary/10 rounded-full blur-xl"></div>
+	<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
 	
 	<div class="hero-content text-center relative z-10">
 		<div class="max-w-4xl">
@@ -20,9 +21,17 @@
 						<span class="text-5xl lg:text-6xl font-kode font-bold">Kival Mahadew</span>
 					</div>
 				</div>
-				<p class="text-xl text-base-content/70 max-w-2xl mx-auto leading-relaxed">
-					Full-stack developer passionate about Rust, AI, and building innovative solutions
-				</p>
+
+				<div class="flex flex-col gap-2 mt-2 max-w-2xl mx-auto">
+					<p class="text-lg text-base-content/70 leading-relaxed">
+						Improving small language models with reinforcement learning
+						<a href="https://quickai.app" target="_blank" class="text-primary font-semibold hover:underline">@QuickAI</a>
+					</p>
+					<p class="text-lg text-base-content/70 leading-relaxed">
+						Researching Active Inference and Multi-Agent Systems
+						<a href="https://shocklab.net" target="_blank" class="text-secondary font-semibold hover:underline">@Shocklab</a>
+					</p>
+				</div>
 			</div>
 			
 			<div class="divider opacity-50"></div>
@@ -34,8 +43,21 @@
 				<a href="https://github.com/KivalM/" target="_blank" class="hover:scale-105 transition-transform duration-200">
 					<Pill name="GitHub" icon="mdi:github" />
 				</a>
-				<a href="mailto:kmahadew21@gmail.com" target="_blank" class="hover:scale-105 transition-transform duration-200">
+				<a href="mailto:kivalm@protonmail.com" class="hover:scale-105 transition-transform duration-200">
 					<Pill name="Email" icon="mdi:email" />
+				</a>
+			</div>
+
+			<!-- Affiliations -->
+			<div class="flex items-center justify-center gap-6 mt-10 opacity-60 hover:opacity-100 transition-opacity duration-300">
+				<a href="https://quickai.app" target="_blank" class="hover:scale-110 transition-transform duration-200" title="QuickAI">
+					<img src="/quickai-logo-black.webp" alt="QuickAI" class="h-8 w-8 object-contain rounded-full bg-white p-0.5" />
+				</a>
+				<a href="https://shocklab.net" target="_blank" class="hover:scale-110 transition-transform duration-200" title="Shocklab">
+					<img src="/Untitled_Artwork-300x300.png" alt="Shocklab" class="h-8 w-8 object-contain rounded-full" />
+				</a>
+				<a href="https://www.uct.ac.za" target="_blank" class="hover:scale-110 transition-transform duration-200" title="UCT">
+					<img src="/UCT-logo-circular-blue-large-295x300.png" alt="UCT" class="h-8 w-8 object-contain rounded-full" />
 				</a>
 			</div>
 		</div>
