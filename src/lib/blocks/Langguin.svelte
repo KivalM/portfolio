@@ -24,7 +24,7 @@
 	];
 </script>
 
-<section class="container mx-auto p-2 md:p-4 py-16" id="achievements">
+<section class="container mx-auto p-2 md:p-4 py-16" id="stuff">
 	<div class="text-center mb-12">
 		<h2 class="text-6xl font-kode font-bold text-primary mb-6">Stuff</h2>
 		<hr class="border-2 border-gradient-to-r from-primary via-primary/50 to-transparent w-1/4 mx-auto my-6" />

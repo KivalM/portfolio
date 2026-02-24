@@ -37,7 +37,7 @@
 	<div class="navbar-center hidden lg:flex">
 		<ul class="menu menu-horizontal px-1 text-lg">
 			<li><a href="/">Home</a></li>
-			<li><a href="/#achievements">Stuff</a></li>
+			<li><a href="/#stuff">Stuff</a></li>
 		</ul>
 	</div>
 	<div class="navbar-end gap-4">
@@ -77,6 +77,6 @@
 {#if open}
 	<ul class="menu menu-vertical px-1 text-2xl font-kode">
 		<li><a href="/">Home</a></li>
-		<li><a href="/#achievements">Stuff</a></li>
+		<li><a href="/#stuff">Stuff</a></li>
 	</ul>
 {/if}
