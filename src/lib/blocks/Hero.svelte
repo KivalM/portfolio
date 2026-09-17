@@ -4,7 +4,7 @@
 </script>
 
 <section
-	class="hero bg-gradient-to-br from-base-100 via-base-200 to-base-100 text-base-content h-full w-full relative overflow-hidden"
+	class="hero relative min-h-[calc(100svh-4rem)] w-full overflow-hidden text-base-content"
 >
 	<!-- Background decoration -->
 	<div

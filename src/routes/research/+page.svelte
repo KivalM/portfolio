@@ -10,6 +10,6 @@
 	/>
 </svelte:head>
 
-<main class="min-h-screen bg-gradient-to-br from-base-100 via-base-200 to-base-100">
+<main class="min-h-screen">
 	<Research />
 </main>

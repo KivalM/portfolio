@@ -21,7 +21,7 @@
 	}}
 />
 
-<section class="min-h-screen bg-gradient-to-br from-base-100 via-base-200 to-base-100">
+<section class="min-h-screen">
 	<div class="container mx-auto px-4 py-12">
 		<!-- Modern Header -->
 		<div class="text-center mb-16">

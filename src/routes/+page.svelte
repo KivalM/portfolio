@@ -20,7 +20,7 @@
 />
 
 <main class="overflow-hidden">
-	<div class="relative flex min-h-[calc(100svh-4rem)] flex-col">
+	<div class="relative">
 		<Hero />
 	</div>
 

@@ -28,7 +28,7 @@
 
 <nav
 	id="main-navigation"
-	class="w-full bg-gradient-to-br from-base-100 via-base-200 to-base-100 font-kode"
+	class="w-full bg-transparent font-kode"
 	aria-label="Main navigation"
 >
 	<div class="navbar container mx-auto px-4">
