@@ -3,9 +3,7 @@
 	import Pill from '$lib/components/button/Pill.svelte';
 </script>
 
-<section
-	class="hero relative min-h-[calc(100svh-4rem)] w-full overflow-hidden text-base-content"
->
+<section class="hero relative min-h-[calc(100svh-4rem)] w-full overflow-hidden text-base-content">
 	<!-- Background decoration -->
 	<div
 		class="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-secondary/5"

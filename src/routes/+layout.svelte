@@ -22,7 +22,9 @@
 </script>
 
 <!-- keep footer at bottom -->
-<div class="flex min-h-screen flex-col bg-fixed bg-gradient-to-br from-base-100 via-base-200 to-base-100">
+<div
+	class="flex min-h-screen flex-col bg-fixed bg-gradient-to-br from-base-100 via-base-200 to-base-100"
+>
 	<Navbar />
 	{@render children?.()}
 	<Footer />

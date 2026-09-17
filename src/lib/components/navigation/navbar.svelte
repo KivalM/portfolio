@@ -26,11 +26,7 @@
 
 <svelte:document onclick={closeOnOutsideClick} />
 
-<nav
-	id="main-navigation"
-	class="w-full bg-transparent font-kode"
-	aria-label="Main navigation"
->
+<nav id="main-navigation" class="w-full bg-transparent font-kode" aria-label="Main navigation">
 	<div class="navbar container mx-auto px-4">
 		<div class="navbar-start">
 			<a class="text-2xl text-primary" href={resolve('/')}>KivalM</a>
