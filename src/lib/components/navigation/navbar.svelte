@@ -7,9 +7,11 @@
 	const links = [
 		{ label: 'Home', path: '/' },
 		{ label: 'Stuff', path: '/#stuff' }
-	];
+	] as const;
 
-	function isActive(path: string) {
+	type NavigationPath = (typeof links)[number]['path'];
+
+	function isActive(path: NavigationPath) {
 		const link = new URL(resolve(path), page.url.origin);
 		return page.url.pathname === link.pathname && page.url.hash === link.hash;
 	}
