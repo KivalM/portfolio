@@ -26,8 +26,12 @@
 
 <svelte:document onclick={closeOnOutsideClick} />
 
-<nav id="main-navigation" class="container mx-auto font-kode" aria-label="Main navigation">
-	<div class="navbar bg-base-100">
+<nav
+	id="main-navigation"
+	class="w-full bg-gradient-to-br from-base-100 via-base-200 to-base-100 font-kode"
+	aria-label="Main navigation"
+>
+	<div class="navbar container mx-auto px-4">
 		<div class="navbar-start">
 			<a class="text-2xl text-primary" href={resolve('/')}>KivalM</a>
 		</div>
@@ -84,16 +88,18 @@
 	</div>
 
 	{#if open}
-		<ul id="mobile-navigation" class="menu menu-vertical px-1 text-2xl">
-			{#each links as link (link.path)}
-				<li>
-					<a
-						href={resolve(link.path)}
-						class={{ 'text-primary': isActive(link.path) }}
-						onclick={() => (open = false)}>{link.label}</a
-					>
-				</li>
-			{/each}
-		</ul>
+		<div class="container mx-auto px-4 pb-4">
+			<ul id="mobile-navigation" class="menu menu-vertical px-1 text-2xl">
+				{#each links as link (link.path)}
+					<li>
+						<a
+							href={resolve(link.path)}
+							class={{ 'text-primary': isActive(link.path) }}
+							onclick={() => (open = false)}>{link.label}</a
+						>
+					</li>
+				{/each}
+			</ul>
+		</div>
 	{/if}
 </nav>

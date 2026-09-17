@@ -2,7 +2,6 @@
 	import Hero from '$lib/blocks/Hero.svelte';
 	import Langguin from '$lib/blocks/Langguin.svelte';
 	import Research from '$lib/blocks/Research.svelte';
-	import Navbar from '$lib/components/navigation/navbar.svelte';
 	import SvelteSeo from 'svelte-seo';
 </script>
 
@@ -21,10 +20,7 @@
 />
 
 <main class="overflow-hidden">
-	<div class="h-screen flex flex-col relative">
-		<div class="container mx-auto">
-			<Navbar />
-		</div>
+	<div class="relative flex min-h-[calc(100svh-4rem)] flex-col">
 		<Hero />
 	</div>
 
