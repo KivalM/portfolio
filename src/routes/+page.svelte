@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Hero from '$lib/blocks/Hero.svelte';
 	import Langguin from '$lib/blocks/Langguin.svelte';
+	import Research from '$lib/blocks/Research.svelte';
 	import Navbar from '$lib/components/navigation/navbar.svelte';
 	import SvelteSeo from 'svelte-seo';
 </script>
@@ -27,5 +28,6 @@
 		<Hero />
 	</div>
 
+	<Research />
 	<Langguin />
 </main>

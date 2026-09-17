@@ -6,7 +6,8 @@
 	let open = $state(false);
 	const links = [
 		{ label: 'Home', path: '/' },
-		{ label: 'Stuff', path: '/#stuff' }
+		{ label: 'Stuff', path: '/#stuff' },
+		{ label: 'Research', path: '/research' }
 	] as const;
 
 	type NavigationPath = (typeof links)[number]['path'];
