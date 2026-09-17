@@ -4,10 +4,7 @@
 </script>
 
 <section class="hero relative min-h-[calc(100svh-4rem)] w-full overflow-hidden text-base-content">
-	<!-- Background decoration -->
-	<div
-		class="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-secondary/5"
-	></div>
+	<!-- Background decorations -->
 	<div class="absolute top-20 left-20 w-32 h-32 bg-primary/10 rounded-full blur-xl"></div>
 	<div class="absolute bottom-20 right-20 w-40 h-40 bg-secondary/10 rounded-full blur-xl"></div>
 	<div

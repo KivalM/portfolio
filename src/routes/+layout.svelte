@@ -22,10 +22,15 @@
 </script>
 
 <!-- keep footer at bottom -->
-<div
-	class="flex min-h-screen flex-col bg-fixed bg-gradient-to-br from-base-100 via-base-200 to-base-100"
->
-	<Navbar />
-	{@render children?.()}
-	<Footer />
+<div class="relative isolate bg-fixed bg-gradient-to-br from-base-100 via-base-200 to-base-100">
+	<div
+		aria-hidden="true"
+		class="pointer-events-none absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-secondary/5"
+	></div>
+
+	<div class="relative z-10 flex min-h-screen flex-col">
+		<Navbar />
+		{@render children?.()}
+		<Footer />
+	</div>
 </div>
