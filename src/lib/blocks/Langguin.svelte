@@ -1,7 +1,7 @@
 <script lang="ts">
-	import a2svGroup from '$lib/assets/A2SV/A2SV Group.jpg?enhanced';
-	import a2svFlag from '$lib/assets/A2SV/A2SV Group Flag.jpg?enhanced';
-	import a2svSpeaking from '$lib/assets/A2SV/A2SV Me speaking.jpg?enhanced';
+	import a2svGroup from '$lib/assets/A2SV/A2SV Group.jpg';
+	import a2svFlag from '$lib/assets/A2SV/A2SV Group Flag.jpg';
+	import a2svSpeaking from '$lib/assets/A2SV/A2SV Me speaking.jpg';
 
 	const achievements = [
 		{
@@ -65,7 +65,7 @@
 							<div
 								class="w-48 h-48 md:w-64 md:h-64 rounded-xl overflow-hidden border border-base-300/50 hover:border-primary/50 hover:scale-105 transition-all duration-300 shadow-lg"
 							>
-								<enhanced:img
+								<img
 									src={image.src}
 									alt={image.alt}
 									loading="lazy"

@@ -1,15 +1,33 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { themeChange } from 'theme-change';
+
+	const themes = { light: 'winter', dark: 'dark' } as const;
+	let theme = $state<(typeof themes)[keyof typeof themes]>(themes.light);
 
 	onMount(() => {
-		themeChange(false);
+		const savedTheme = localStorage.getItem('theme');
+		if (savedTheme === themes.dark || savedTheme === themes.light) {
+			theme = savedTheme;
+		}
+		document.documentElement.dataset.theme = theme;
 	});
+
+	function toggleTheme() {
+		theme = theme === themes.dark ? themes.light : themes.dark;
+		document.documentElement.dataset.theme = theme;
+		localStorage.setItem('theme', theme);
+	}
 </script>
 
 <label class="swap swap-rotate" for="theme-toggle">
 	<!-- this hidden checkbox controls the state -->
-	<input type="checkbox" data-toggle-theme="dark,winter" id="theme-toggle" />
+	<input
+		type="checkbox"
+		id="theme-toggle"
+		checked={theme === themes.dark}
+		onchange={toggleTheme}
+		aria-label="Toggle dark mode"
+	/>
 
 	<!-- sun icon -->
 	<svg
