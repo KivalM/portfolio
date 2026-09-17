@@ -1,7 +1,6 @@
 <script lang="ts">
 	import Hero from '$lib/blocks/Hero.svelte';
 	import Langguin from '$lib/blocks/Langguin.svelte';
-	import Projects from '$lib/blocks/Projects.svelte';
 	import Navbar from '$lib/components/navigation/navbar.svelte';
 	import SvelteSeo from 'svelte-seo';
 </script>
@@ -13,7 +12,7 @@
 	keywords="kival mahadew, kivalm, machine learning, active inference"
 	openGraph={{
 		title: 'Kival Mahadew',
-		description: "ML Engineer & Researcher",
+		description: 'ML Engineer & Researcher',
 		url: 'https://kivalm.com/',
 		type: 'website',
 		site_name: 'Kival Mahadew'
@@ -28,6 +27,5 @@
 		<Hero />
 	</div>
 
-	<!-- <Projects /> -->
 	<Langguin />
 </main>
